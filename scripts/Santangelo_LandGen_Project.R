@@ -4,55 +4,67 @@ MicroSat_Data <- read.csv("data-clean/Johnson-et-al_8-Cities_MicroSat-Loci", hea
 # Load required packages
 library(adegenet)
 library(pegas)
+library(poppr)
+library(dplyr)
 
-# Create dataframe for each city. Stored in list
-Cities <- split(MicroSat_Data, MicroSat_Data$City)
+# Create dataset with only Acton and Fergus
+MicroSat_Data_sub <- MicroSat_Data %>%
+  filter(City == "Fergus" | City == "Acton") 
 
 # Create genind object for each city
-for (i in 1:length(Cities)){
-  name = sprintf("%s.genind", names(Cities[i]))
-  data_frame = Cities[i][[1]]
-  assign(name, df2genind(X = data_frame[,c(6:21)], sep=":",
-                             ncode = NULL,
-                             ind.names= data_frame$PlantID,
-                             loc.names=NULL,
-                             pop = data_frame$pop,
-                             NA.char="0",
-                             ploidy=2,
-                             type="codom",
-                             strata=NULL,
-                             hierarchy=NULL))
+create_genind <- function(data_frame){
+  genind <- df2genind(X = data_frame[,c(6:21)], sep=":",
+            ncode = NULL,
+            ind.names= data_frame$PlantID,
+            loc.names=NULL,
+            pop = data_frame$pop,
+            NA.char="0",
+            ploidy=2,
+            type="codom",
+            strata=NULL,
+            hierarchy=NULL)
+  
+  return(genind)
 }
+Fergus.genind <- create_genind(MicroSat_Data_sub[MicroSat_Data_sub$City == "Fergus", ] )
+Acton.genind <- create_genind(MicroSat_Data_sub[MicroSat_Data_sub$City == "Acton", ] )
 
 # Inspect and summarize each genind objects
+summary(Fergus.genind)
+summary(Acton.genind)
 
-
-# Deviation from HWE
+# Deviation from HWE for each locus, across populations
 round(pegas::hw.test(Acton.genind, B = 1000), digits = 3)
-round(pegas::hw.test(Brantford.genind, B = 1000), digits = 3)
-round(pegas::hw.test(Elmira.genind, B = 1000), digits = 3)
-round(pegas::hw.test(Everett.genind, B = 1000), digits = 3)
 round(pegas::hw.test(Fergus.genind, B = 1000), digits = 3)
-round(pegas::hw.test(Guelph.genind, B = 1000), digits = 3)
-round(pegas::hw.test(`Port Hope.genind`, B = 1000), digits = 3)
-round(pegas::hw.test(Waterloo.genind, B = 1000), digits = 3)
 
-HWE.test <- data.frame(sapply(seppop(Acton.genind), 
-                              function(ls) pegas::hw.test(ls, B=1000)[,4]))
-HWE.test.MC <- t(data.matrix(HWE.test))
-{cat("Chi-squared test (p-values):", "\n")
-  round(HWE.test.MC,3)}
+# Deviations from HWE for each locus and each population individually
+HWE_Loci_Pops <- function(genind_object){
+  HWE.test <- data.frame(sapply(seppop(genind_object), 
+                                      function(ls) pegas::hw.test(ls, B=1000)[,4]))
+  HWE.test.MC <- t(data.matrix(HWE.test))
+  {cat("Monte Carlo (p-values):", "\n")
+    round(HWE.test,3)}
+  }
 
-alpha=0.05
-Prop.loci.out.of.HWE <- data.frame(MC = apply(HWE.test.MC < alpha, 2, mean))
-Prop.loci.out.of.HWE
+HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Acton.genind))
+HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Fergus.genind))
 
-Prop.pops.out.of.HWE <- data.frame(MC = apply(HWE.test.MC < alpha, 1, mean))
-Prop.pops.out.of.HWE
+# Global LD and LD among marker pairs
+LD_Acton <- poppr::ia(Acton.genind, sample = 1000)
+LD_Fergus <- poppr::ia(Fergus.genind, sample = 1000)
+LD_Pair_Acton <- poppr::pair.ia(Acton.genind)
+LD_Pair_Fergus <- poppr::pair.ia(Fergus.genind)
 
-MC.fdr <- matrix(p.adjust(HWE.test.MC, method="fdr"), 
-                 nrow = nrow(HWE.test.MC))
 
-Prop.pops.out.of.HWE <- data.frame(MC = apply(HWE.test.MC < alpha, 1, mean),
-                                   MC.fdr = apply(MC.fdr < alpha, 1, mean))
-Prop.pops.out.of.HWE 
+Fergus_Clusters <- find.clusters(Fergus.genind, max.n.clust=40)
+Fergus_dapc <- dapc(Fergus.genind, Fergus_Clusters$grp)
+scatter(Fergus_dapc)
+
+# Genind for both Acton and Fergus combined
+Act.Ferg.genind <- create_genind(MicroSat_Data_sub)
+
+Act_Ferg_Clusters <- find.clusters(Act.Ferg.genind, max.n.clust=40)
+Act_Ferg_dapc <- dapc(Act.Ferg.genind, Act_Ferg_Clusters$grp, grp = "City")
+scatter(Act_Ferg_dapc, posi.da="bottomright", bg="white",
+        pch=17:22, cstar=0, scree.pca=TRUE,
+        posi.pca="bottomleft")
