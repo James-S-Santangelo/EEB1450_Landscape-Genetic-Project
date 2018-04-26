@@ -1,0 +1,1201 @@
+City,Population,Enviro,Individual
+Guelph,Gu1,urban,1
+Guelph,Gu1,urban,2
+Guelph,Gu1,urban,3
+Guelph,Gu1,urban,4
+Guelph,Gu1,urban,5
+Guelph,Gu1,urban,6
+Guelph,Gu1,urban,7
+Guelph,Gu1,urban,8
+Guelph,Gu1,urban,9
+Guelph,Gu1,urban,10
+Guelph,Gu2,urban,1
+Guelph,Gu2,urban,2
+Guelph,Gu2,urban,3
+Guelph,Gu2,urban,4
+Guelph,Gu2,urban,5
+Guelph,Gu2,urban,6
+Guelph,Gu2,urban,7
+Guelph,Gu2,urban,8
+Guelph,Gu2,urban,9
+Guelph,Gu2,urban,10
+Guelph,Gu3,urban,1
+Guelph,Gu3,urban,2
+Guelph,Gu3,urban,3
+Guelph,Gu3,urban,4
+Guelph,Gu3,urban,5
+Guelph,Gu3,urban,6
+Guelph,Gu3,urban,7
+Guelph,Gu3,urban,8
+Guelph,Gu3,urban,9
+Guelph,Gu3,urban,10
+Guelph,Gu4,urban,1
+Guelph,Gu4,urban,2
+Guelph,Gu4,urban,3
+Guelph,Gu4,urban,4
+Guelph,Gu4,urban,5
+Guelph,Gu4,urban,6
+Guelph,Gu4,urban,7
+Guelph,Gu4,urban,8
+Guelph,Gu4,urban,9
+Guelph,Gu4,urban,10
+Guelph,Gu5,urban,1
+Guelph,Gu5,urban,2
+Guelph,Gu5,urban,3
+Guelph,Gu5,urban,4
+Guelph,Gu5,urban,5
+Guelph,Gu5,urban,6
+Guelph,Gu5,urban,7
+Guelph,Gu5,urban,8
+Guelph,Gu5,urban,9
+Guelph,Gu5,urban,10
+Guelph,Gu6,urban,1
+Guelph,Gu6,urban,2
+Guelph,Gu6,urban,3
+Guelph,Gu6,urban,4
+Guelph,Gu6,urban,5
+Guelph,Gu6,urban,6
+Guelph,Gu6,urban,7
+Guelph,Gu6,urban,8
+Guelph,Gu6,urban,9
+Guelph,Gu6,urban,10
+Guelph,Gu7,urban,1
+Guelph,Gu7,urban,2
+Guelph,Gu7,urban,3
+Guelph,Gu7,urban,4
+Guelph,Gu7,urban,5
+Guelph,Gu7,urban,6
+Guelph,Gu7,urban,7
+Guelph,Gu7,urban,8
+Guelph,Gu7,urban,9
+Guelph,Gu7,urban,10
+Guelph,Gu8,urban,1
+Guelph,Gu8,urban,2
+Guelph,Gu8,urban,3
+Guelph,Gu8,urban,4
+Guelph,Gu8,urban,5
+Guelph,Gu8,urban,6
+Guelph,Gu8,urban,7
+Guelph,Gu8,urban,8
+Guelph,Gu8,urban,9
+Guelph,Gu8,urban,10
+Guelph,Gu9,rural,1
+Guelph,Gu9,rural,2
+Guelph,Gu9,rural,3
+Guelph,Gu9,rural,4
+Guelph,Gu9,rural,5
+Guelph,Gu9,rural,6
+Guelph,Gu9,rural,7
+Guelph,Gu9,rural,8
+Guelph,Gu9,rural,9
+Guelph,Gu9,rural,10
+Guelph,Gu10,rural,1
+Guelph,Gu10,rural,2
+Guelph,Gu10,rural,3
+Guelph,Gu10,rural,4
+Guelph,Gu10,rural,5
+Guelph,Gu10,rural,6
+Guelph,Gu10,rural,7
+Guelph,Gu10,rural,8
+Guelph,Gu10,rural,9
+Guelph,Gu10,rural,10
+Guelph,Gu11,rural,1
+Guelph,Gu11,rural,2
+Guelph,Gu11,rural,3
+Guelph,Gu11,rural,4
+Guelph,Gu11,rural,5
+Guelph,Gu11,rural,6
+Guelph,Gu11,rural,7
+Guelph,Gu11,rural,8
+Guelph,Gu11,rural,9
+Guelph,Gu11,rural,10
+Guelph,Gu12,rural,1
+Guelph,Gu12,rural,2
+Guelph,Gu12,rural,3
+Guelph,Gu12,rural,4
+Guelph,Gu12,rural,5
+Guelph,Gu12,rural,6
+Guelph,Gu12,rural,7
+Guelph,Gu12,rural,8
+Guelph,Gu12,rural,9
+Guelph,Gu12,rural,10
+Guelph,Gu13,rural,1
+Guelph,Gu13,rural,2
+Guelph,Gu13,rural,3
+Guelph,Gu13,rural,4
+Guelph,Gu13,rural,5
+Guelph,Gu13,rural,6
+Guelph,Gu13,rural,7
+Guelph,Gu13,rural,8
+Guelph,Gu13,rural,9
+Guelph,Gu13,rural,10
+Guelph,Gu14,rural,1
+Guelph,Gu14,rural,2
+Guelph,Gu14,rural,3
+Guelph,Gu14,rural,4
+Guelph,Gu14,rural,5
+Guelph,Gu14,rural,6
+Guelph,Gu14,rural,7
+Guelph,Gu14,rural,8
+Guelph,Gu14,rural,9
+Guelph,Gu14,rural,10
+Guelph,Gu15,rural,1
+Guelph,Gu15,rural,2
+Guelph,Gu15,rural,3
+Guelph,Gu15,rural,4
+Guelph,Gu15,rural,5
+Guelph,Gu15,rural,6
+Guelph,Gu15,rural,7
+Guelph,Gu15,rural,8
+Guelph,Gu15,rural,9
+Guelph,Gu15,rural,10
+Fergus,Fe1,urban,1
+Fergus,Fe1,urban,2
+Fergus,Fe1,urban,3
+Fergus,Fe1,urban,4
+Fergus,Fe1,urban,5
+Fergus,Fe1,urban,6
+Fergus,Fe1,urban,7
+Fergus,Fe1,urban,8
+Fergus,Fe1,urban,9
+Fergus,Fe1,urban,10
+Fergus,Fe2,urban,1
+Fergus,Fe2,urban,2
+Fergus,Fe2,urban,3
+Fergus,Fe2,urban,4
+Fergus,Fe2,urban,5
+Fergus,Fe2,urban,6
+Fergus,Fe2,urban,7
+Fergus,Fe2,urban,8
+Fergus,Fe2,urban,9
+Fergus,Fe2,urban,10
+Fergus,Fe3,urban,1
+Fergus,Fe3,urban,2
+Fergus,Fe3,urban,3
+Fergus,Fe3,urban,4
+Fergus,Fe3,urban,5
+Fergus,Fe3,urban,6
+Fergus,Fe3,urban,7
+Fergus,Fe3,urban,8
+Fergus,Fe3,urban,9
+Fergus,Fe3,urban,10
+Fergus,Fe4,urban,1
+Fergus,Fe4,urban,2
+Fergus,Fe4,urban,3
+Fergus,Fe4,urban,4
+Fergus,Fe4,urban,5
+Fergus,Fe4,urban,6
+Fergus,Fe4,urban,7
+Fergus,Fe4,urban,8
+Fergus,Fe4,urban,9
+Fergus,Fe4,urban,10
+Fergus,Fe5,urban,1
+Fergus,Fe5,urban,2
+Fergus,Fe5,urban,3
+Fergus,Fe5,urban,4
+Fergus,Fe5,urban,5
+Fergus,Fe5,urban,6
+Fergus,Fe5,urban,7
+Fergus,Fe5,urban,8
+Fergus,Fe5,urban,9
+Fergus,Fe5,urban,10
+Fergus,Fe6,urban,1
+Fergus,Fe6,urban,2
+Fergus,Fe6,urban,3
+Fergus,Fe6,urban,4
+Fergus,Fe6,urban,5
+Fergus,Fe6,urban,6
+Fergus,Fe6,urban,7
+Fergus,Fe6,urban,8
+Fergus,Fe6,urban,9
+Fergus,Fe6,urban,10
+Fergus,Fe7,urban,1
+Fergus,Fe7,urban,2
+Fergus,Fe7,urban,3
+Fergus,Fe7,urban,4
+Fergus,Fe7,urban,5
+Fergus,Fe7,urban,6
+Fergus,Fe7,urban,7
+Fergus,Fe7,urban,8
+Fergus,Fe7,urban,9
+Fergus,Fe7,urban,10
+Fergus,Fe8,rural,1
+Fergus,Fe8,rural,2
+Fergus,Fe8,rural,3
+Fergus,Fe8,rural,4
+Fergus,Fe8,rural,5
+Fergus,Fe8,rural,6
+Fergus,Fe8,rural,7
+Fergus,Fe8,rural,8
+Fergus,Fe8,rural,9
+Fergus,Fe8,rural,10
+Fergus,Fe9,rural,1
+Fergus,Fe9,rural,2
+Fergus,Fe9,rural,3
+Fergus,Fe9,rural,4
+Fergus,Fe9,rural,5
+Fergus,Fe9,rural,6
+Fergus,Fe9,rural,7
+Fergus,Fe9,rural,8
+Fergus,Fe9,rural,9
+Fergus,Fe9,rural,10
+Fergus,Fe10,rural,1
+Fergus,Fe10,rural,2
+Fergus,Fe10,rural,3
+Fergus,Fe10,rural,4
+Fergus,Fe10,rural,5
+Fergus,Fe10,rural,6
+Fergus,Fe10,rural,7
+Fergus,Fe10,rural,8
+Fergus,Fe10,rural,9
+Fergus,Fe10,rural,10
+Fergus,Fe11,rural,1
+Fergus,Fe11,rural,2
+Fergus,Fe11,rural,3
+Fergus,Fe11,rural,4
+Fergus,Fe11,rural,5
+Fergus,Fe11,rural,6
+Fergus,Fe11,rural,7
+Fergus,Fe11,rural,8
+Fergus,Fe11,rural,9
+Fergus,Fe11,rural,10
+Fergus,Fe12,rural,1
+Fergus,Fe12,rural,2
+Fergus,Fe12,rural,3
+Fergus,Fe12,rural,4
+Fergus,Fe12,rural,5
+Fergus,Fe12,rural,6
+Fergus,Fe12,rural,7
+Fergus,Fe12,rural,8
+Fergus,Fe12,rural,9
+Fergus,Fe12,rural,10
+Fergus,Fe13,rural,1
+Fergus,Fe13,rural,2
+Fergus,Fe13,rural,3
+Fergus,Fe13,rural,4
+Fergus,Fe13,rural,5
+Fergus,Fe13,rural,6
+Fergus,Fe13,rural,7
+Fergus,Fe13,rural,8
+Fergus,Fe13,rural,9
+Fergus,Fe13,rural,10
+Fergus,Fe14,rural,1
+Fergus,Fe14,rural,2
+Fergus,Fe14,rural,3
+Fergus,Fe14,rural,4
+Fergus,Fe14,rural,5
+Fergus,Fe14,rural,6
+Fergus,Fe14,rural,7
+Fergus,Fe14,rural,8
+Fergus,Fe14,rural,9
+Fergus,Fe14,rural,10
+Fergus,Fe15,rural,1
+Fergus,Fe15,rural,2
+Fergus,Fe15,rural,3
+Fergus,Fe15,rural,4
+Fergus,Fe15,rural,5
+Fergus,Fe15,rural,6
+Fergus,Fe15,rural,7
+Fergus,Fe15,rural,8
+Fergus,Fe15,rural,9
+Fergus,Fe15,rural,10
+Port Hope,PH1,urban,1
+Port Hope,PH1,urban,2
+Port Hope,PH1,urban,3
+Port Hope,PH1,urban,4
+Port Hope,PH1,urban,5
+Port Hope,PH1,urban,6
+Port Hope,PH1,urban,7
+Port Hope,PH1,urban,8
+Port Hope,PH1,urban,9
+Port Hope,PH1,urban,10
+Port Hope,PH2,urban,1
+Port Hope,PH2,urban,2
+Port Hope,PH2,urban,3
+Port Hope,PH2,urban,4
+Port Hope,PH2,urban,5
+Port Hope,PH2,urban,6
+Port Hope,PH2,urban,7
+Port Hope,PH2,urban,8
+Port Hope,PH2,urban,9
+Port Hope,PH2,urban,10
+Port Hope,PH3,urban,1
+Port Hope,PH3,urban,2
+Port Hope,PH3,urban,3
+Port Hope,PH3,urban,4
+Port Hope,PH3,urban,5
+Port Hope,PH3,urban,6
+Port Hope,PH3,urban,7
+Port Hope,PH3,urban,8
+Port Hope,PH3,urban,9
+Port Hope,PH3,urban,10
+Port Hope,PH4,urban,1
+Port Hope,PH4,urban,2
+Port Hope,PH4,urban,3
+Port Hope,PH4,urban,4
+Port Hope,PH4,urban,5
+Port Hope,PH4,urban,6
+Port Hope,PH4,urban,7
+Port Hope,PH4,urban,8
+Port Hope,PH4,urban,9
+Port Hope,PH4,urban,10
+Port Hope,PH5,urban,1
+Port Hope,PH5,urban,2
+Port Hope,PH5,urban,3
+Port Hope,PH5,urban,4
+Port Hope,PH5,urban,5
+Port Hope,PH5,urban,6
+Port Hope,PH5,urban,7
+Port Hope,PH5,urban,8
+Port Hope,PH5,urban,9
+Port Hope,PH5,urban,10
+Port Hope,PH6,urban,1
+Port Hope,PH6,urban,2
+Port Hope,PH6,urban,3
+Port Hope,PH6,urban,4
+Port Hope,PH6,urban,5
+Port Hope,PH6,urban,6
+Port Hope,PH6,urban,7
+Port Hope,PH6,urban,8
+Port Hope,PH6,urban,9
+Port Hope,PH6,urban,10
+Port Hope,PH7,urban,1
+Port Hope,PH7,urban,2
+Port Hope,PH7,urban,3
+Port Hope,PH7,urban,4
+Port Hope,PH7,urban,5
+Port Hope,PH7,urban,6
+Port Hope,PH7,urban,7
+Port Hope,PH7,urban,8
+Port Hope,PH7,urban,9
+Port Hope,PH7,urban,10
+Port Hope,PH8,urban,1
+Port Hope,PH8,urban,2
+Port Hope,PH8,urban,3
+Port Hope,PH8,urban,4
+Port Hope,PH8,urban,5
+Port Hope,PH8,urban,6
+Port Hope,PH8,urban,7
+Port Hope,PH8,urban,8
+Port Hope,PH8,urban,9
+Port Hope,PH8,urban,10
+Port Hope,PH9,urban,1
+Port Hope,PH9,urban,2
+Port Hope,PH9,urban,3
+Port Hope,PH9,urban,4
+Port Hope,PH9,urban,5
+Port Hope,PH9,urban,6
+Port Hope,PH9,urban,7
+Port Hope,PH9,urban,8
+Port Hope,PH9,urban,9
+Port Hope,PH9,urban,10
+Port Hope,PH10,urban,1
+Port Hope,PH10,urban,2
+Port Hope,PH10,urban,3
+Port Hope,PH10,urban,4
+Port Hope,PH10,urban,5
+Port Hope,PH10,urban,6
+Port Hope,PH10,urban,7
+Port Hope,PH10,urban,8
+Port Hope,PH10,urban,9
+Port Hope,PH10,urban,10
+Port Hope,PH11,rural,1
+Port Hope,PH11,rural,2
+Port Hope,PH11,rural,3
+Port Hope,PH11,rural,4
+Port Hope,PH11,rural,5
+Port Hope,PH11,rural,6
+Port Hope,PH11,rural,7
+Port Hope,PH11,rural,8
+Port Hope,PH11,rural,9
+Port Hope,PH11,rural,10
+Port Hope,PH12,rural,1
+Port Hope,PH12,rural,2
+Port Hope,PH12,rural,3
+Port Hope,PH12,rural,4
+Port Hope,PH12,rural,5
+Port Hope,PH12,rural,6
+Port Hope,PH12,rural,7
+Port Hope,PH12,rural,8
+Port Hope,PH12,rural,9
+Port Hope,PH12,rural,10
+Port Hope,PH13,rural,1
+Port Hope,PH13,rural,2
+Port Hope,PH13,rural,3
+Port Hope,PH13,rural,4
+Port Hope,PH13,rural,5
+Port Hope,PH13,rural,6
+Port Hope,PH13,rural,7
+Port Hope,PH13,rural,8
+Port Hope,PH13,rural,9
+Port Hope,PH13,rural,10
+Port Hope,PH14,rural,1
+Port Hope,PH14,rural,2
+Port Hope,PH14,rural,3
+Port Hope,PH14,rural,4
+Port Hope,PH14,rural,5
+Port Hope,PH14,rural,6
+Port Hope,PH14,rural,7
+Port Hope,PH14,rural,8
+Port Hope,PH14,rural,9
+Port Hope,PH14,rural,10
+Port Hope,PH15,rural,1
+Port Hope,PH15,rural,2
+Port Hope,PH15,rural,3
+Port Hope,PH15,rural,4
+Port Hope,PH15,rural,5
+Port Hope,PH15,rural,6
+Port Hope,PH15,rural,7
+Port Hope,PH15,rural,8
+Port Hope,PH15,rural,9
+Port Hope,PH15,rural,10
+Brantford,Br1,urban,1
+Brantford,Br1,urban,2
+Brantford,Br1,urban,3
+Brantford,Br1,urban,4
+Brantford,Br1,urban,5
+Brantford,Br1,urban,6
+Brantford,Br1,urban,7
+Brantford,Br1,urban,8
+Brantford,Br1,urban,9
+Brantford,Br1,urban,10
+Brantford,Br2,urban,1
+Brantford,Br2,urban,2
+Brantford,Br2,urban,3
+Brantford,Br2,urban,4
+Brantford,Br2,urban,5
+Brantford,Br2,urban,6
+Brantford,Br2,urban,7
+Brantford,Br2,urban,8
+Brantford,Br2,urban,9
+Brantford,Br2,urban,10
+Brantford,Br3,urban,1
+Brantford,Br3,urban,2
+Brantford,Br3,urban,3
+Brantford,Br3,urban,4
+Brantford,Br3,urban,5
+Brantford,Br3,urban,6
+Brantford,Br3,urban,7
+Brantford,Br3,urban,8
+Brantford,Br3,urban,9
+Brantford,Br3,urban,10
+Brantford,Br4,urban,1
+Brantford,Br4,urban,2
+Brantford,Br4,urban,3
+Brantford,Br4,urban,4
+Brantford,Br4,urban,5
+Brantford,Br4,urban,6
+Brantford,Br4,urban,7
+Brantford,Br4,urban,8
+Brantford,Br4,urban,9
+Brantford,Br4,urban,10
+Brantford,Br5,urban,1
+Brantford,Br5,urban,2
+Brantford,Br5,urban,3
+Brantford,Br5,urban,4
+Brantford,Br5,urban,5
+Brantford,Br5,urban,6
+Brantford,Br5,urban,7
+Brantford,Br5,urban,8
+Brantford,Br5,urban,9
+Brantford,Br5,urban,10
+Brantford,Br6,urban,1
+Brantford,Br6,urban,2
+Brantford,Br6,urban,3
+Brantford,Br6,urban,4
+Brantford,Br6,urban,5
+Brantford,Br6,urban,6
+Brantford,Br6,urban,7
+Brantford,Br6,urban,8
+Brantford,Br6,urban,9
+Brantford,Br6,urban,10
+Brantford,Br7,urban,1
+Brantford,Br7,urban,2
+Brantford,Br7,urban,3
+Brantford,Br7,urban,4
+Brantford,Br7,urban,5
+Brantford,Br7,urban,6
+Brantford,Br7,urban,7
+Brantford,Br7,urban,8
+Brantford,Br7,urban,9
+Brantford,Br7,urban,10
+Brantford,Br8,urban,1
+Brantford,Br8,urban,2
+Brantford,Br8,urban,3
+Brantford,Br8,urban,4
+Brantford,Br8,urban,5
+Brantford,Br8,urban,6
+Brantford,Br8,urban,7
+Brantford,Br8,urban,8
+Brantford,Br8,urban,9
+Brantford,Br8,urban,10
+Brantford,Br9,urban,1
+Brantford,Br9,urban,2
+Brantford,Br9,urban,3
+Brantford,Br9,urban,4
+Brantford,Br9,urban,5
+Brantford,Br9,urban,6
+Brantford,Br9,urban,7
+Brantford,Br9,urban,8
+Brantford,Br9,urban,9
+Brantford,Br9,urban,10
+Brantford,Br10,urban,1
+Brantford,Br10,urban,2
+Brantford,Br10,urban,3
+Brantford,Br10,urban,4
+Brantford,Br10,urban,5
+Brantford,Br10,urban,6
+Brantford,Br10,urban,7
+Brantford,Br10,urban,8
+Brantford,Br10,urban,9
+Brantford,Br10,urban,10
+Brantford,Br11,rural,1
+Brantford,Br11,rural,2
+Brantford,Br11,rural,3
+Brantford,Br11,rural,4
+Brantford,Br11,rural,5
+Brantford,Br11,rural,6
+Brantford,Br11,rural,7
+Brantford,Br11,rural,8
+Brantford,Br11,rural,9
+Brantford,Br11,rural,10
+Brantford,Br12,rural,1
+Brantford,Br12,rural,2
+Brantford,Br12,rural,3
+Brantford,Br12,rural,4
+Brantford,Br12,rural,5
+Brantford,Br12,rural,6
+Brantford,Br12,rural,7
+Brantford,Br12,rural,8
+Brantford,Br12,rural,9
+Brantford,Br12,rural,10
+Brantford,Br13,rural,1
+Brantford,Br13,rural,2
+Brantford,Br13,rural,3
+Brantford,Br13,rural,4
+Brantford,Br13,rural,5
+Brantford,Br13,rural,6
+Brantford,Br13,rural,7
+Brantford,Br13,rural,8
+Brantford,Br13,rural,9
+Brantford,Br13,rural,10
+Brantford,Br14,rural,1
+Brantford,Br14,rural,2
+Brantford,Br14,rural,3
+Brantford,Br14,rural,4
+Brantford,Br14,rural,5
+Brantford,Br14,rural,6
+Brantford,Br14,rural,7
+Brantford,Br14,rural,8
+Brantford,Br14,rural,9
+Brantford,Br14,rural,10
+Brantford,Br15,rural,1
+Brantford,Br15,rural,2
+Brantford,Br15,rural,3
+Brantford,Br15,rural,4
+Brantford,Br15,rural,5
+Brantford,Br15,rural,6
+Brantford,Br15,rural,7
+Brantford,Br15,rural,8
+Brantford,Br15,rural,9
+Brantford,Br15,rural,10
+Everett,Ev1,urban,1
+Everett,Ev1,urban,2
+Everett,Ev1,urban,3
+Everett,Ev1,urban,4
+Everett,Ev1,urban,5
+Everett,Ev1,urban,6
+Everett,Ev1,urban,7
+Everett,Ev1,urban,8
+Everett,Ev1,urban,9
+Everett,Ev1,urban,10
+Everett,Ev2,urban,1
+Everett,Ev2,urban,2
+Everett,Ev2,urban,3
+Everett,Ev2,urban,4
+Everett,Ev2,urban,5
+Everett,Ev2,urban,6
+Everett,Ev2,urban,7
+Everett,Ev2,urban,8
+Everett,Ev2,urban,9
+Everett,Ev2,urban,10
+Everett,Ev3,urban,1
+Everett,Ev3,urban,2
+Everett,Ev3,urban,3
+Everett,Ev3,urban,4
+Everett,Ev3,urban,5
+Everett,Ev3,urban,6
+Everett,Ev3,urban,7
+Everett,Ev3,urban,8
+Everett,Ev3,urban,9
+Everett,Ev3,urban,10
+Everett,Ev4,urban,1
+Everett,Ev4,urban,2
+Everett,Ev4,urban,3
+Everett,Ev4,urban,4
+Everett,Ev4,urban,5
+Everett,Ev4,urban,6
+Everett,Ev4,urban,7
+Everett,Ev4,urban,8
+Everett,Ev4,urban,9
+Everett,Ev4,urban,10
+Everett,Ev5,urban,1
+Everett,Ev5,urban,2
+Everett,Ev5,urban,3
+Everett,Ev5,urban,4
+Everett,Ev5,urban,5
+Everett,Ev5,urban,6
+Everett,Ev5,urban,7
+Everett,Ev5,urban,8
+Everett,Ev5,urban,9
+Everett,Ev5,urban,10
+Everett,Ev6,urban,1
+Everett,Ev6,urban,2
+Everett,Ev6,urban,3
+Everett,Ev6,urban,4
+Everett,Ev6,urban,5
+Everett,Ev6,urban,6
+Everett,Ev6,urban,7
+Everett,Ev6,urban,8
+Everett,Ev6,urban,9
+Everett,Ev6,urban,10
+Everett,Ev7,urban,1
+Everett,Ev7,urban,2
+Everett,Ev7,urban,3
+Everett,Ev7,urban,4
+Everett,Ev7,urban,5
+Everett,Ev7,urban,6
+Everett,Ev7,urban,7
+Everett,Ev7,urban,8
+Everett,Ev7,urban,9
+Everett,Ev7,urban,10
+Everett,Ev8,urban,1
+Everett,Ev8,urban,2
+Everett,Ev8,urban,3
+Everett,Ev8,urban,4
+Everett,Ev8,urban,5
+Everett,Ev8,urban,6
+Everett,Ev8,urban,7
+Everett,Ev8,urban,8
+Everett,Ev8,urban,9
+Everett,Ev8,urban,10
+Everett,Ev9,rural,1
+Everett,Ev9,rural,2
+Everett,Ev9,rural,3
+Everett,Ev9,rural,4
+Everett,Ev9,rural,5
+Everett,Ev9,rural,6
+Everett,Ev9,rural,7
+Everett,Ev9,rural,8
+Everett,Ev9,rural,9
+Everett,Ev9,rural,10
+Everett,Ev10,rural,1
+Everett,Ev10,rural,2
+Everett,Ev10,rural,3
+Everett,Ev10,rural,4
+Everett,Ev10,rural,5
+Everett,Ev10,rural,6
+Everett,Ev10,rural,7
+Everett,Ev10,rural,8
+Everett,Ev10,rural,9
+Everett,Ev10,rural,10
+Everett,Ev11,rural,1
+Everett,Ev11,rural,2
+Everett,Ev11,rural,3
+Everett,Ev11,rural,4
+Everett,Ev11,rural,5
+Everett,Ev11,rural,6
+Everett,Ev11,rural,7
+Everett,Ev11,rural,8
+Everett,Ev11,rural,9
+Everett,Ev11,rural,10
+Everett,Ev12,rural,1
+Everett,Ev12,rural,2
+Everett,Ev12,rural,3
+Everett,Ev12,rural,4
+Everett,Ev12,rural,5
+Everett,Ev12,rural,6
+Everett,Ev12,rural,7
+Everett,Ev12,rural,8
+Everett,Ev12,rural,9
+Everett,Ev12,rural,10
+Everett,Ev13,rural,1
+Everett,Ev13,rural,2
+Everett,Ev13,rural,3
+Everett,Ev13,rural,4
+Everett,Ev13,rural,5
+Everett,Ev13,rural,6
+Everett,Ev13,rural,7
+Everett,Ev13,rural,8
+Everett,Ev13,rural,9
+Everett,Ev13,rural,10
+Everett,Ev14,rural,1
+Everett,Ev14,rural,2
+Everett,Ev14,rural,3
+Everett,Ev14,rural,4
+Everett,Ev14,rural,5
+Everett,Ev14,rural,6
+Everett,Ev14,rural,7
+Everett,Ev14,rural,8
+Everett,Ev14,rural,9
+Everett,Ev14,rural,10
+Everett,Ev15,rural,1
+Everett,Ev15,rural,2
+Everett,Ev15,rural,3
+Everett,Ev15,rural,4
+Everett,Ev15,rural,5
+Everett,Ev15,rural,6
+Everett,Ev15,rural,7
+Everett,Ev15,rural,8
+Everett,Ev15,rural,9
+Everett,Ev15,rural,10
+Waterloo,Wa1,urban,1
+Waterloo,Wa1,urban,2
+Waterloo,Wa1,urban,3
+Waterloo,Wa1,urban,4
+Waterloo,Wa1,urban,5
+Waterloo,Wa1,urban,6
+Waterloo,Wa1,urban,7
+Waterloo,Wa1,urban,8
+Waterloo,Wa1,urban,9
+Waterloo,Wa1,urban,10
+Waterloo,Wa2,urban,1
+Waterloo,Wa2,urban,2
+Waterloo,Wa2,urban,3
+Waterloo,Wa2,urban,4
+Waterloo,Wa2,urban,5
+Waterloo,Wa2,urban,6
+Waterloo,Wa2,urban,7
+Waterloo,Wa2,urban,8
+Waterloo,Wa2,urban,9
+Waterloo,Wa2,urban,10
+Waterloo,Wa3,urban,1
+Waterloo,Wa3,urban,2
+Waterloo,Wa3,urban,3
+Waterloo,Wa3,urban,4
+Waterloo,Wa3,urban,5
+Waterloo,Wa3,urban,6
+Waterloo,Wa3,urban,7
+Waterloo,Wa3,urban,8
+Waterloo,Wa3,urban,9
+Waterloo,Wa3,urban,10
+Waterloo,Wa4,urban,1
+Waterloo,Wa4,urban,2
+Waterloo,Wa4,urban,3
+Waterloo,Wa4,urban,4
+Waterloo,Wa4,urban,5
+Waterloo,Wa4,urban,6
+Waterloo,Wa4,urban,7
+Waterloo,Wa4,urban,8
+Waterloo,Wa4,urban,9
+Waterloo,Wa4,urban,10
+Waterloo,Wa5,urban,1
+Waterloo,Wa5,urban,2
+Waterloo,Wa5,urban,3
+Waterloo,Wa5,urban,4
+Waterloo,Wa5,urban,5
+Waterloo,Wa5,urban,6
+Waterloo,Wa5,urban,7
+Waterloo,Wa5,urban,8
+Waterloo,Wa5,urban,9
+Waterloo,Wa5,urban,10
+Waterloo,Wa6,urban,1
+Waterloo,Wa6,urban,2
+Waterloo,Wa6,urban,3
+Waterloo,Wa6,urban,4
+Waterloo,Wa6,urban,5
+Waterloo,Wa6,urban,6
+Waterloo,Wa6,urban,7
+Waterloo,Wa6,urban,8
+Waterloo,Wa6,urban,9
+Waterloo,Wa6,urban,10
+Waterloo,Wa7,urban,1
+Waterloo,Wa7,urban,2
+Waterloo,Wa7,urban,3
+Waterloo,Wa7,urban,4
+Waterloo,Wa7,urban,5
+Waterloo,Wa7,urban,6
+Waterloo,Wa7,urban,7
+Waterloo,Wa7,urban,8
+Waterloo,Wa7,urban,9
+Waterloo,Wa7,urban,10
+Waterloo,Wa8,urban,1
+Waterloo,Wa8,urban,2
+Waterloo,Wa8,urban,3
+Waterloo,Wa8,urban,4
+Waterloo,Wa8,urban,5
+Waterloo,Wa8,urban,6
+Waterloo,Wa8,urban,7
+Waterloo,Wa8,urban,8
+Waterloo,Wa8,urban,9
+Waterloo,Wa8,urban,10
+Waterloo,Wa9,urban,1
+Waterloo,Wa9,urban,2
+Waterloo,Wa9,urban,3
+Waterloo,Wa9,urban,4
+Waterloo,Wa9,urban,5
+Waterloo,Wa9,urban,6
+Waterloo,Wa9,urban,7
+Waterloo,Wa9,urban,8
+Waterloo,Wa9,urban,9
+Waterloo,Wa9,urban,10
+Waterloo,Wa10,urban,1
+Waterloo,Wa10,urban,2
+Waterloo,Wa10,urban,3
+Waterloo,Wa10,urban,4
+Waterloo,Wa10,urban,5
+Waterloo,Wa10,urban,6
+Waterloo,Wa10,urban,7
+Waterloo,Wa10,urban,8
+Waterloo,Wa10,urban,9
+Waterloo,Wa10,urban,10
+Waterloo,Wa11,rural,1
+Waterloo,Wa11,rural,2
+Waterloo,Wa11,rural,3
+Waterloo,Wa11,rural,4
+Waterloo,Wa11,rural,5
+Waterloo,Wa11,rural,6
+Waterloo,Wa11,rural,7
+Waterloo,Wa11,rural,8
+Waterloo,Wa11,rural,9
+Waterloo,Wa11,rural,10
+Waterloo,Wa12,rural,1
+Waterloo,Wa12,rural,2
+Waterloo,Wa12,rural,3
+Waterloo,Wa12,rural,4
+Waterloo,Wa12,rural,5
+Waterloo,Wa12,rural,6
+Waterloo,Wa12,rural,7
+Waterloo,Wa12,rural,8
+Waterloo,Wa12,rural,9
+Waterloo,Wa12,rural,10
+Waterloo,Wa13,rural,1
+Waterloo,Wa13,rural,2
+Waterloo,Wa13,rural,3
+Waterloo,Wa13,rural,4
+Waterloo,Wa13,rural,5
+Waterloo,Wa13,rural,6
+Waterloo,Wa13,rural,7
+Waterloo,Wa13,rural,8
+Waterloo,Wa13,rural,9
+Waterloo,Wa13,rural,10
+Waterloo,Wa14,rural,1
+Waterloo,Wa14,rural,2
+Waterloo,Wa14,rural,3
+Waterloo,Wa14,rural,4
+Waterloo,Wa14,rural,5
+Waterloo,Wa14,rural,6
+Waterloo,Wa14,rural,7
+Waterloo,Wa14,rural,8
+Waterloo,Wa14,rural,9
+Waterloo,Wa14,rural,10
+Waterloo,Wa15,rural,1
+Waterloo,Wa15,rural,2
+Waterloo,Wa15,rural,3
+Waterloo,Wa15,rural,4
+Waterloo,Wa15,rural,5
+Waterloo,Wa15,rural,6
+Waterloo,Wa15,rural,7
+Waterloo,Wa15,rural,8
+Waterloo,Wa15,rural,9
+Waterloo,Wa15,rural,10
+Elmira,El1,urban,1
+Elmira,El1,urban,2
+Elmira,El1,urban,3
+Elmira,El1,urban,4
+Elmira,El1,urban,5
+Elmira,El1,urban,6
+Elmira,El1,urban,7
+Elmira,El1,urban,8
+Elmira,El1,urban,9
+Elmira,El1,urban,10
+Elmira,El2,urban,1
+Elmira,El2,urban,2
+Elmira,El2,urban,3
+Elmira,El2,urban,4
+Elmira,El2,urban,5
+Elmira,El2,urban,6
+Elmira,El2,urban,7
+Elmira,El2,urban,8
+Elmira,El2,urban,9
+Elmira,El2,urban,10
+Elmira,El3,urban,1
+Elmira,El3,urban,2
+Elmira,El3,urban,3
+Elmira,El3,urban,4
+Elmira,El3,urban,5
+Elmira,El3,urban,6
+Elmira,El3,urban,7
+Elmira,El3,urban,8
+Elmira,El3,urban,9
+Elmira,El3,urban,10
+Elmira,El4,urban,1
+Elmira,El4,urban,2
+Elmira,El4,urban,3
+Elmira,El4,urban,4
+Elmira,El4,urban,5
+Elmira,El4,urban,6
+Elmira,El4,urban,7
+Elmira,El4,urban,8
+Elmira,El4,urban,9
+Elmira,El4,urban,10
+Elmira,El5,urban,1
+Elmira,El5,urban,2
+Elmira,El5,urban,3
+Elmira,El5,urban,4
+Elmira,El5,urban,5
+Elmira,El5,urban,6
+Elmira,El5,urban,7
+Elmira,El5,urban,8
+Elmira,El5,urban,9
+Elmira,El5,urban,10
+Elmira,El6,urban,1
+Elmira,El6,urban,2
+Elmira,El6,urban,3
+Elmira,El6,urban,4
+Elmira,El6,urban,5
+Elmira,El6,urban,6
+Elmira,El6,urban,7
+Elmira,El6,urban,8
+Elmira,El6,urban,9
+Elmira,El6,urban,10
+Elmira,El7,urban,1
+Elmira,El7,urban,2
+Elmira,El7,urban,3
+Elmira,El7,urban,4
+Elmira,El7,urban,5
+Elmira,El7,urban,6
+Elmira,El7,urban,7
+Elmira,El7,urban,8
+Elmira,El7,urban,9
+Elmira,El7,urban,10
+Elmira,El8,urban,1
+Elmira,El8,urban,2
+Elmira,El8,urban,3
+Elmira,El8,urban,4
+Elmira,El8,urban,5
+Elmira,El8,urban,6
+Elmira,El8,urban,7
+Elmira,El8,urban,8
+Elmira,El8,urban,9
+Elmira,El8,urban,10
+Elmira,El9,rural,1
+Elmira,El9,rural,2
+Elmira,El9,rural,3
+Elmira,El9,rural,4
+Elmira,El9,rural,5
+Elmira,El9,rural,6
+Elmira,El9,rural,7
+Elmira,El9,rural,8
+Elmira,El9,rural,9
+Elmira,El9,rural,10
+Elmira,El10,rural,1
+Elmira,El10,rural,2
+Elmira,El10,rural,3
+Elmira,El10,rural,4
+Elmira,El10,rural,5
+Elmira,El10,rural,6
+Elmira,El10,rural,7
+Elmira,El10,rural,8
+Elmira,El10,rural,9
+Elmira,El10,rural,10
+Elmira,El11,rural,1
+Elmira,El11,rural,2
+Elmira,El11,rural,3
+Elmira,El11,rural,4
+Elmira,El11,rural,5
+Elmira,El11,rural,6
+Elmira,El11,rural,7
+Elmira,El11,rural,8
+Elmira,El11,rural,9
+Elmira,El11,rural,10
+Elmira,El12,rural,1
+Elmira,El12,rural,2
+Elmira,El12,rural,3
+Elmira,El12,rural,4
+Elmira,El12,rural,5
+Elmira,El12,rural,6
+Elmira,El12,rural,7
+Elmira,El12,rural,8
+Elmira,El12,rural,9
+Elmira,El12,rural,10
+Elmira,El13,rural,1
+Elmira,El13,rural,2
+Elmira,El13,rural,3
+Elmira,El13,rural,4
+Elmira,El13,rural,5
+Elmira,El13,rural,6
+Elmira,El13,rural,7
+Elmira,El13,rural,8
+Elmira,El13,rural,9
+Elmira,El13,rural,10
+Elmira,El14,rural,1
+Elmira,El14,rural,2
+Elmira,El14,rural,3
+Elmira,El14,rural,4
+Elmira,El14,rural,5
+Elmira,El14,rural,6
+Elmira,El14,rural,7
+Elmira,El14,rural,8
+Elmira,El14,rural,9
+Elmira,El14,rural,10
+Elmira,El15,rural,1
+Elmira,El15,rural,2
+Elmira,El15,rural,3
+Elmira,El15,rural,4
+Elmira,El15,rural,5
+Elmira,El15,rural,6
+Elmira,El15,rural,7
+Elmira,El15,rural,8
+Elmira,El15,rural,9
+Elmira,El15,rural,10
+Acton,Ac1,urban,1
+Acton,Ac1,urban,2
+Acton,Ac1,urban,3
+Acton,Ac1,urban,4
+Acton,Ac1,urban,5
+Acton,Ac1,urban,6
+Acton,Ac1,urban,7
+Acton,Ac1,urban,8
+Acton,Ac1,urban,9
+Acton,Ac1,urban,10
+Acton,Ac2,urban,1
+Acton,Ac2,urban,2
+Acton,Ac2,urban,3
+Acton,Ac2,urban,4
+Acton,Ac2,urban,5
+Acton,Ac2,urban,6
+Acton,Ac2,urban,7
+Acton,Ac2,urban,8
+Acton,Ac2,urban,9
+Acton,Ac2,urban,10
+Acton,Ac3,urban,1
+Acton,Ac3,urban,2
+Acton,Ac3,urban,3
+Acton,Ac3,urban,4
+Acton,Ac3,urban,5
+Acton,Ac3,urban,6
+Acton,Ac3,urban,7
+Acton,Ac3,urban,8
+Acton,Ac3,urban,9
+Acton,Ac3,urban,10
+Acton,Ac4,urban,1
+Acton,Ac4,urban,2
+Acton,Ac4,urban,3
+Acton,Ac4,urban,4
+Acton,Ac4,urban,5
+Acton,Ac4,urban,6
+Acton,Ac4,urban,7
+Acton,Ac4,urban,8
+Acton,Ac4,urban,9
+Acton,Ac4,urban,10
+Acton,Ac5,urban,1
+Acton,Ac5,urban,2
+Acton,Ac5,urban,3
+Acton,Ac5,urban,4
+Acton,Ac5,urban,5
+Acton,Ac5,urban,6
+Acton,Ac5,urban,7
+Acton,Ac5,urban,8
+Acton,Ac5,urban,9
+Acton,Ac5,urban,10
+Acton,Ac6,urban,1
+Acton,Ac6,urban,2
+Acton,Ac6,urban,3
+Acton,Ac6,urban,4
+Acton,Ac6,urban,5
+Acton,Ac6,urban,6
+Acton,Ac6,urban,7
+Acton,Ac6,urban,8
+Acton,Ac6,urban,9
+Acton,Ac6,urban,10
+Acton,Ac7,urban,1
+Acton,Ac7,urban,2
+Acton,Ac7,urban,3
+Acton,Ac7,urban,4
+Acton,Ac7,urban,5
+Acton,Ac7,urban,6
+Acton,Ac7,urban,7
+Acton,Ac7,urban,8
+Acton,Ac7,urban,9
+Acton,Ac7,urban,10
+Acton,Ac8,urban,1
+Acton,Ac8,urban,2
+Acton,Ac8,urban,3
+Acton,Ac8,urban,4
+Acton,Ac8,urban,5
+Acton,Ac8,urban,6
+Acton,Ac8,urban,7
+Acton,Ac8,urban,8
+Acton,Ac8,urban,9
+Acton,Ac8,urban,10
+Acton,Ac9,rural,1
+Acton,Ac9,rural,2
+Acton,Ac9,rural,3
+Acton,Ac9,rural,4
+Acton,Ac9,rural,5
+Acton,Ac9,rural,6
+Acton,Ac9,rural,7
+Acton,Ac9,rural,8
+Acton,Ac9,rural,9
+Acton,Ac9,rural,10
+Acton,Ac10,rural,1
+Acton,Ac10,rural,2
+Acton,Ac10,rural,3
+Acton,Ac10,rural,4
+Acton,Ac10,rural,5
+Acton,Ac10,rural,6
+Acton,Ac10,rural,7
+Acton,Ac10,rural,8
+Acton,Ac10,rural,9
+Acton,Ac10,rural,10
+Acton,Ac11,rural,1
+Acton,Ac11,rural,2
+Acton,Ac11,rural,3
+Acton,Ac11,rural,4
+Acton,Ac11,rural,5
+Acton,Ac11,rural,6
+Acton,Ac11,rural,7
+Acton,Ac11,rural,8
+Acton,Ac11,rural,9
+Acton,Ac11,rural,10
+Acton,Ac12,rural,1
+Acton,Ac12,rural,2
+Acton,Ac12,rural,3
+Acton,Ac12,rural,4
+Acton,Ac12,rural,5
+Acton,Ac12,rural,6
+Acton,Ac12,rural,7
+Acton,Ac12,rural,8
+Acton,Ac12,rural,9
+Acton,Ac12,rural,10
+Acton,Ac13,rural,1
+Acton,Ac13,rural,2
+Acton,Ac13,rural,3
+Acton,Ac13,rural,4
+Acton,Ac13,rural,5
+Acton,Ac13,rural,6
+Acton,Ac13,rural,7
+Acton,Ac13,rural,8
+Acton,Ac13,rural,9
+Acton,Ac13,rural,10
+Acton,Ac14,rural,1
+Acton,Ac14,rural,2
+Acton,Ac14,rural,3
+Acton,Ac14,rural,4
+Acton,Ac14,rural,5
+Acton,Ac14,rural,6
+Acton,Ac14,rural,7
+Acton,Ac14,rural,8
+Acton,Ac14,rural,9
+Acton,Ac14,rural,10
+Acton,Ac15,rural,1
+Acton,Ac15,rural,2
+Acton,Ac15,rural,3
+Acton,Ac15,rural,4
+Acton,Ac15,rural,5
+Acton,Ac15,rural,6
+Acton,Ac15,rural,7
+Acton,Ac15,rural,8
+Acton,Ac15,rural,9
+Acton,Ac15,rural,10

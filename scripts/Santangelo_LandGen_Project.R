@@ -1,15 +1,45 @@
-# Load Cleaned microsat loci data
-MicroSat_Data <- read.csv("data-clean/Johnson-et-al_8-Cities_MicroSat-Loci", header = TRUE)
-
 # Load required packages
-library(adegenet)
-library(pegas)
-library(poppr)
-library(dplyr)
+library(EcoGenetics)
 
-# Create dataset with only Acton and Fergus
-MicroSat_Data_sub <- MicroSat_Data %>%
-  filter(City == "Fergus" | City == "Acton") 
+# library(adegenet)
+# library(pegas)
+# library(poppr)
+# library(dplyr)
+# library(hierfstat)
+
+# Load in all datasets
+MicroSat <- read.csv("data-clean/Johnson-et-al_8-Cities_MicroSat-Loci.csv")
+Habitat <- read.csv("data-clean/Johnson-et-al_8-Cities_Habitat-data.csv")
+Coord <- read.csv("data-clean/Johnson-et-al_8-Cities_Coord-data.csv")
+Enviro <- read.csv("data-clean/Johnson-et-al_8-Cities_Env-data.csv")
+
+
+add_rownames <- function(data_frame){
+  row.names(data_frame) <- data_frame$PlantID
+  data_frame <- data_frame %>% 
+    select(-PlantID)
+  # data_frame <- data_frame[order(row.names(data_frame)),]
+  return(data_frame)
+}
+
+MicroSat <- add_rownames(MicroSat)
+Habitat <- add_rownames(Habitat)
+Coord <- add_rownames(Coord)
+Enviro <- add_rownames(Enviro)
+
+MicroSat_NoPop <- MicroSat %>%
+  select(-pop)
+  
+# Create ecogenetics object
+cities.ecogen <- ecogen(XY = Coord,
+                        G.processed = TRUE, order.G = TRUE, type = "codominant",
+                        ploidy = 2, sep = ":", ncod = NULL, missing = "0",
+                        NA.char = "0", poly.level = NULL, rm.empty.ind = TRUE, order.df = TRUE,
+                        set.names = NULL, valid.names = FALSE)
+ecoslot.G(cities.ecogen, type = "codominant", 
+          ploidy = 2, sep = ":", NA.char = "0") <- MicroSat_NoPop
+ecoslot.E(cities.ecogen) <- Enviro
+ecoslot.S(cities.ecogen) <- Habitat
 
 # Create genind object for each city
 create_genind <- function(data_frame){
@@ -26,8 +56,12 @@ create_genind <- function(data_frame){
   
   return(genind)
 }
-Fergus.genind <- create_genind(MicroSat_Data_sub[MicroSat_Data_sub$City == "Fergus", ] )
-Acton.genind <- create_genind(MicroSat_Data_sub[MicroSat_Data_sub$City == "Acton", ] )
+
+Fergus.genind <- create_genind(MicroSat_Data[MicroSat_Data$City == "Fergus", ] )
+Acton.genind <- create_genind(MicroSat_Data[MicroSat_Data$City == "Acton", ] )
+
+Fergus.genind@other$Enviro <- MicroSat_Data[MicroSat_Data$City == "Fergus", ]$Enviro
+Acton.genind@other$Enviro <- MicroSat_Data[MicroSat_Data$City == "Acton", ]$Enviro
 
 # Inspect and summarize each genind objects
 summary(Fergus.genind)
@@ -55,6 +89,9 @@ LD_Fergus <- poppr::ia(Fergus.genind, sample = 1000)
 LD_Pair_Acton <- poppr::pair.ia(Acton.genind)
 LD_Pair_Fergus <- poppr::pair.ia(Fergus.genind)
 
+fstat(Acton.genind)
+pairwise.fst(Acton.genind, pop=NULL, res.type=c("dist","matrix"))
+gstat.randtest(Acton.genind,nsim=99)
 
 Fergus_Clusters <- find.clusters(Fergus.genind, max.n.clust=40)
 Fergus_dapc <- dapc(Fergus.genind, Fergus_Clusters$grp)
