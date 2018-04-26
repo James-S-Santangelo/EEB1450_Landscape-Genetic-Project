@@ -17,6 +17,7 @@ Structure_data <- Structure_data %>%
   mutate(PlantID = paste(city_code, pop, Individual, sep = ".")) %>% # Add Plant ID
   select(PlantID, everything()) %>% # Move Plant ID to first column
   filter(City == "Fergus" | City == "Acton") %>% # Only Acton and Fergus
+  filter(pop != 1) %>%
   select(PlantID, City, pop, Habitat) %>% # Select Plant ID and habitat columns
   as.data.frame()
 

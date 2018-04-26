@@ -17,6 +17,7 @@ Coord_Env_data <- Coord_Env_data %>%
   mutate(plant = 1:n(), # Number plants sequentially within sites
          city_code = ifelse(city == "Fergus", "Fe", "Ac"), # Add city code
          PlantID = paste(city_code, site, plant, sep = ".")) %>% # Add PlantID
+  filter(site != 1) %>%
   ungroup() %>% # Ungroup 
   select(PlantID, everything()) %>% #Move PlantID to beginning
   select(PlantID, lat, long, buildings, impervious) %>%
