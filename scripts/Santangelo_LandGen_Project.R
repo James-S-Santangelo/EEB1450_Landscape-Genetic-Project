@@ -3,12 +3,11 @@ library(EcoGenetics)
 library(adegenet)
 library(pegas)
 library(poppr)
+library(PopGenReport)
 library(dplyr)
 library(SoDA)
 library(hierfstat)
-library(gstudio)
-library(PopGenReport)
-library(mmod)
+library(vegan)
 
 # Load in all datasets
 MicroSat <- read.csv("data-clean/Johnson-et-al_8-Cities_MicroSat-Loci.csv")
@@ -34,27 +33,26 @@ Enviro <- add_rownames(Enviro)
 # Create ecogenetics object
 create_ecogen <- function(MicroSat, Structure, Coord, Enviro, City){
   
-  
+  # Create list with data frames for ecogen object
   dataFrames <- list(MicroSat = MicroSat, 
                      Structure = Structure, 
                      Coord = Coord, 
                      Enviro = Enviro)
+  
+  # First two letters of city name will be string used to subset dataframes
   toString(City)
   subsetter = substr(City, 1, 2)
-  
-  subsetted_dataFrames <- list()
+  subsetted_dataFrames <- list() # Empty list to append subsetted dataframes
 
+  # Loop through dataframes and subset by city. Append to list
   for(i in 1:length(dataFrames)){
     rows <- grep(paste0("^", subsetter), rownames(dataFrames[[i]]))
     subsetted <- dataFrames[[i]][rows, ]
     name <- names(dataFrames[i])
-
     subsetted_dataset_name <- paste0(name, "Sub")
-    
     subsetted_dataFrames[[subsetted_dataset_name]] <- subsetted
-    
   }
-  
+  # Create ecogen object using subsetted dataframes
   EcoGen.name <- paste(City, "ecogen", sep = ".")
   EcoGen.name <- ecogen(XY = subsetted_dataFrames$CoordSub, 
                         G = subsetted_dataFrames$MicroSatSub,
@@ -64,6 +62,8 @@ create_ecogen <- function(MicroSat, Structure, Coord, Enviro, City){
                         ploidy = 2, sep = ":", ncod = NULL, missing = "NA",
                         NA.char = "0", poly.level = NULL, rm.empty.ind = TRUE, order.df = TRUE,
                         set.names = NULL, valid.names = FALSE)
+  
+  # Change coordinates to X, Y in kilometers
   EcoGen.name@XY <- as.data.frame(SoDA::geoXY(EcoGen.name@XY[,'lat'],
                                               EcoGen.name@XY[,'long'],
                                               unit = 1000))
@@ -78,10 +78,11 @@ Acton.ecogen <- create_ecogen(MicroSat, Structure, Coord, Enviro, "Acton")
 Fergus.genind <- ecogen2genind(Fergus.ecogen)
 Acton.genind <- ecogen2genind(Acton.ecogen)
 
-# Add pop to genin objects
+# Add pop to genind objects
 Fergus.genind@pop <- Fergus.genind@strata$pop
 Acton.genind@pop <- Acton.genind@strata$pop
 
+# Create Genpop objects. Average X, Y coordinates for each population.
 Fergus.genpop <- adegenet::genind2genpop(Fergus.genind, process.other = TRUE)
 Acton.genpop <- adegenet::genind2genpop(Acton.genind, process.other = TRUE)
 
@@ -111,26 +112,25 @@ LD_Fergus <- poppr::ia(Fergus.genind, sample = 1000)
 LD_Pair_Acton <- poppr::pair.ia(Acton.genind)
 LD_Pair_Fergus <- poppr::pair.ia(Fergus.genind)
 
-fstat(Acton.genind, pop = Acton.genind@strata$pop)
-pairwise.fst(Acton.genind, pop=NULL, res.type=c("dist","matrix"))
-gstat.randtest(Acton.genind,nsim=99)
-
-Fergus_Clusters <- find.clusters(Fergus.genind, max.n.clust=40)
-Fergus_dapc <- dapc(Fergus.genind, Fergus_Clusters$grp)
-scatter(Fergus_dapc)
-
-# Genind for both Acton and Fergus combined
-Act.Ferg.genind <- create_genind(MicroSat_Data_sub)
-
-Act_Ferg_Clusters <- find.clusters(Act.Ferg.genind, max.n.clust=40)
-Act_Ferg_dapc <- dapc(Act.Ferg.genind, Act_Ferg_Clusters$grp, grp = "City")
-scatter(Act_Ferg_dapc, posi.da="bottomright", bg="white",
-        pch=17:22, cstar=0, scree.pca=TRUE,
-        posi.pca="bottomleft")
+# fstat(Acton.genind, pop = Acton.genind@strata$pop)
+# pairwise.fst(Acton.genind, pop=NULL, res.type=c("dist","matrix"))
+# gstat.randtest(Acton.genind,nsim=99)
+# 
+# Fergus_Clusters <- find.clusters(Fergus.genind, max.n.clust=40)
+# Fergus_dapc <- dapc(Fergus.genind, Fergus_Clusters$grp)
+# scatter(Fergus_dapc)
+# 
+# # Genind for both Acton and Fergus combined
+# Act.Ferg.genind <- create_genind(MicroSat_Data_sub)
+# 
+# Act_Ferg_Clusters <- find.clusters(Act.Ferg.genind, max.n.clust=40)
+# Act_Ferg_dapc <- dapc(Act.Ferg.genind, Act_Ferg_Clusters$grp, grp = "City")
+# scatter(Act_Ferg_dapc, posi.da="bottomright", bg="white",
+#         pch=17:22, cstar=0, scree.pca=TRUE,
+#         posi.pca="bottomleft")
 
 GD.pop.PairwiseFst.hierfstat <- hierfstat::pairwise.fst(Fergus.genind,
                                                         pop = NULL, res.type = c("dist"))
-GD.pop.propShared <- PopGenReport::pairwise.propShared(Fergus.genind)
 GD.pop.Nei <- adegenet::dist.genpop(Fergus.genpop, method=1)
 GD.pop.Edwards <- adegenet::dist.genpop(Fergus.genpop, method=2)
 GD.pop.Reynolds <- adegenet::dist.genpop(Fergus.genpop, method=3)
@@ -139,6 +139,7 @@ GD.pop.Provesti <- adegenet::dist.genpop(Fergus.genpop, method=5)
 GD.pop.Joost <- mmod::pairwise_D(Fergus.genind, linearized = FALSE)
 GD.pop.Hedrick <- mmod::pairwise_Gst_Hedrick(Fergus.genind, linearized = FALSE)
 GD.pop.NeiGst <- mmod::pairwise_Gst_Nei(Fergus.genind, linearized = FALSE)
+GD.pop.propShared <- PopGenReport::pairwise.propShared(Fergus.genind)
 
 GD.pop <- list(pairwiseFst.hierfstat = GD.pop.PairwiseFst.hierfstat,
                propShared.PopGenReport = 1 - GD.pop.propShared,
@@ -152,24 +153,103 @@ GD.pop <- list(pairwiseFst.hierfstat = GD.pop.PairwiseFst.hierfstat,
                Nei.mmod = GD.pop.NeiGst)
 round(cor(sapply(GD.pop, function(ls) as.vector(ls))),2)[,1:2]
 
-Dgeo <- dist(Fergus.genpop@other$xy[,c("X", "Y")])
-par(mar=c(4,4,0,0))
-Dgen <- GD.pop$pairwiseFst.hierfstat
-dens <- MASS::kde2d(Dgeo, Dgen, n=300)
-myPal <- colorRampPalette(c("white","blue","gold","orange","red"))
-plot(Dgeo, Dgen, pch=20, cex=0.5,
-     xlab="Geographic Distance", ylab="Genetic Distance")
-image(dens, col=transp(myPal(300), 0.7), add=TRUE)
-abline(lm(Dgen ~ Dgeo))
-lines(loess.smooth(Dgeo, Dgen), col="red")
+create_IBD_plot <- function(genind_object, genpop_object){
+  
+  # Calculate proportion of shared alleles among populations
+  # Returns allele similarity matrix
+  # Subtract from one to get genetic distance matrix
+  # Dgen <- 1 - PopGenReport::pairwise.propShared(genind_object)
+  Dgen <- hierfstat::pairwise.fst(genind_object,
+                                  pop = NULL, res.type = c("dist"))
+  
+  # Calculate geographic distance matrix
+  Dgeo <- dist(genpop_object@other$xy[,c("X", "Y")])
+  par(mar=c(4,4,0,0))
+  
+  # Plot Genetic distance against genetic distance 
+  dens <- MASS::kde2d(Dgeo, Dgen, n=300) # Estimate 2 dimensional kernal.
+  myPal <- colorRampPalette(c("white","blue","gold","orange","red")) # Set color palette for kernal
+  plot(Dgeo, Dgen, pch=20, cex=0.5,
+       xlab="Geographic Distance", ylab="Genetic Distance") # Create plot
+  image(dens, col=transp(myPal(300), 0.7), add=TRUE) # Add kernal density to plot
+  abline(lm(Dgen ~ Dgeo)) # Add linear model to plot
+  lines(loess.smooth(Dgeo, Dgen), col="red") # Add loess smoother
+}
 
+mantel_tests <- function(ecogen_object, genind_object, genpop_object, nclasses){
+  Dgen <- hierfstat::pairwise.fst(genind_object,
+                                  pop = NULL, res.type = c("dist"))
+  Dgeo <- dist(genpop_object@other$xy[,c("X", "Y")])
+  
+  print(ade4::mantel.randtest(Dgen,Dgeo))
+  
+  print(eco.cormantel(M = dist(ecogen_object[["A"]]), 
+                XY = ecogen_object[["XY"]],  
+                nsim = 1000, 
+                nclass = nclasses,
+                alternative = "less"))
+  
+}
 
-corm <- eco.cormantel(M = dist(Acton.ecogen[["A"]]), 
-                      XY = Acton.ecogen[["XY"]],  
-                      nsim = 1000, 
-                      nclass = 4,
-                      alternative = "less")
-corm
-eco.plotCorrelog(corm)
+# Isolation by distance plots
+Fergus_IBD_plot <- create_IBD_plot(Fergus.genind, Fergus.genpop)
+Acton_IBD_plot <- create_IBD_plot(Acton.genind, Acton.genpop)
 
-GD.pop$propShared.PopGenReport
+# Mantel test and mantel correllelograms
+mantel_tests(Fergus.ecogen,Fergus.genind, Fergus.genpop, nclasses = 8)
+mantel_tests(Acton.ecogen, Acton.genind, Acton.genpop, nclasses = 5)
+
+# Function to perform RDA
+perform_rda <- function(Structure, genpop_object, City){
+  
+  # Subset Structure dataframe for City and return one observation per population
+  toString(City)
+  subsetter = substr(City, 1, 2)
+  rows <- grep(paste0("^", subsetter), rownames(Structure))
+  city.structure <- Structure[rows, ]
+  city.habitat <- city.structure %>%
+    group_by(pop) %>%
+    slice(1)
+  
+  # Define datasets for RDA
+  MicroSats <- makefreq(genpop_object) # Alleles
+  Habitats <- city.habitat # Habitat (i.e. urban or rural)
+  Geo_coords <- genpop_object@other$xy # Geographic coordinates of population
+  
+  # Perform RDA for effect of urbanization, conditioned on distance. 
+  rda <- vegan::rda(MicroSats ~ Habitat + Condition(Geo_coords$X + Geo_coords$Y), data = Habitats)
+  Pvals <- anova.cca(rda, permutations = 10000) # Permute RDA to get P-values
+  
+  # Return habitat data, rda, and Pvals as list.
+  lst <- list(Habitats, rda, Pvals)
+  return(lst)
+}
+
+# Perform RDAs for each city. 
+Acton.RDA <- perform_rda(Structure, Acton.genpop, "Acton")
+Fergus.RDA <- perform_rda(Structure, Fergus.genpop, "Fergus")
+
+plot_rda <- function(RDA_object){
+  
+  # Extract habitat and RDA data from list returned from RDA function
+  Habitat_data <- RDA_object[[1]]
+  RDA_model <- RDA_object[[2]]
+  
+  # Color vector for plotting
+  colvec <- c("red2", "green4", "mediumblue")
+  
+  # Create plot
+  plot(RDA_model, type = "n")
+  
+  # Add points, colored by habitat
+  with(Habitat_data, points(RDA_model, display = "sites", col = colvec[Habitat],
+                               scaling = 3, pch = 21, bg = colvec[Habitat]))
+  
+  # Add legend
+  with(Habitat_data, legend("topright", legend = levels(Habitat), bty = "n",
+                               col = colvec, pch = 21, pt.bg = colvec))
+}
+
+# Generate RDA biplots. 
+plot_rda(Fergus.RDA)
+plot_rda(Acton.RDA)
