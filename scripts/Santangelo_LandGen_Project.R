@@ -107,58 +107,15 @@ HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Acton.genind))
 HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Fergus.genind))
 
 # Global LD and LD among marker pairs
-LD_Acton <- poppr::ia(Acton.genind, sample = 1000)
+LD_Acton <- poppr::ia(Acton.genind, sample = 10)
 LD_Fergus <- poppr::ia(Fergus.genind, sample = 1000)
 LD_Pair_Acton <- poppr::pair.ia(Acton.genind)
 LD_Pair_Fergus <- poppr::pair.ia(Fergus.genind)
 
-# fstat(Acton.genind, pop = Acton.genind@strata$pop)
-# pairwise.fst(Acton.genind, pop=NULL, res.type=c("dist","matrix"))
-# gstat.randtest(Acton.genind,nsim=99)
-# 
-# Fergus_Clusters <- find.clusters(Fergus.genind, max.n.clust=40)
-# Fergus_dapc <- dapc(Fergus.genind, Fergus_Clusters$grp)
-# scatter(Fergus_dapc)
-# 
-# # Genind for both Acton and Fergus combined
-# Act.Ferg.genind <- create_genind(MicroSat_Data_sub)
-# 
-# Act_Ferg_Clusters <- find.clusters(Act.Ferg.genind, max.n.clust=40)
-# Act_Ferg_dapc <- dapc(Act.Ferg.genind, Act_Ferg_Clusters$grp, grp = "City")
-# scatter(Act_Ferg_dapc, posi.da="bottomright", bg="white",
-#         pch=17:22, cstar=0, scree.pca=TRUE,
-#         posi.pca="bottomleft")
-
-GD.pop.PairwiseFst.hierfstat <- hierfstat::pairwise.fst(Fergus.genind,
-                                                        pop = NULL, res.type = c("dist"))
-GD.pop.Nei <- adegenet::dist.genpop(Fergus.genpop, method=1)
-GD.pop.Edwards <- adegenet::dist.genpop(Fergus.genpop, method=2)
-GD.pop.Reynolds <- adegenet::dist.genpop(Fergus.genpop, method=3)
-GD.pop.Rogers <- adegenet::dist.genpop(Fergus.genpop, method=4)
-GD.pop.Provesti <- adegenet::dist.genpop(Fergus.genpop, method=5)
-GD.pop.Joost <- mmod::pairwise_D(Fergus.genind, linearized = FALSE)
-GD.pop.Hedrick <- mmod::pairwise_Gst_Hedrick(Fergus.genind, linearized = FALSE)
-GD.pop.NeiGst <- mmod::pairwise_Gst_Nei(Fergus.genind, linearized = FALSE)
-GD.pop.propShared <- PopGenReport::pairwise.propShared(Fergus.genind)
-
-GD.pop <- list(pairwiseFst.hierfstat = GD.pop.PairwiseFst.hierfstat,
-               propShared.PopGenReport = 1 - GD.pop.propShared,
-               Nei.adegenet = GD.pop.Nei,
-               Edwards.adegenet = GD.pop.Edwards,
-               Reynolds.adegenet = GD.pop.Reynolds,
-               Rogers.adegenet = GD.pop.Rogers,
-               Provesti.adegenet = GD.pop.Provesti,
-               Joost.mmod = GD.pop.Joost,
-               Hedrick.mmod = GD.pop.Hedrick,
-               Nei.mmod = GD.pop.NeiGst)
-round(cor(sapply(GD.pop, function(ls) as.vector(ls))),2)[,1:2]
-
 create_IBD_plot <- function(genind_object, genpop_object){
   
   # Calculate proportion of shared alleles among populations
-  # Returns allele similarity matrix
-  # Subtract from one to get genetic distance matrix
-  # Dgen <- 1 - PopGenReport::pairwise.propShared(genind_object)
+  # Returns pairwise Fst matrix
   Dgen <- hierfstat::pairwise.fst(genind_object,
                                   pop = NULL, res.type = c("dist"))
   
@@ -236,7 +193,7 @@ plot_rda <- function(RDA_object){
   RDA_model <- RDA_object[[2]]
   
   # Color vector for plotting
-  colvec <- c("red2", "green4", "mediumblue")
+  colvec <- c("red2", "green4")
   
   # Create plot
   plot(RDA_model, type = "n")
@@ -248,6 +205,8 @@ plot_rda <- function(RDA_object){
   # Add legend
   with(Habitat_data, legend("topright", legend = levels(Habitat), bty = "n",
                                col = colvec, pch = 21, pt.bg = colvec))
+  
+  ordiellipse(RDA_model, Habitat_data$Habitat, col = colvec)
 }
 
 # Generate RDA biplots. 
