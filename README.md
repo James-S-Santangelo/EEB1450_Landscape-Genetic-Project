@@ -1,4 +1,4 @@
-# EEB1440: Landscape genetics project — Populations genetics in white clover (_Trifolium repens_) along urbanization gradients
+# EEB1450: Landscape genetics project — Populations genetics in white clover (_Trifolium repens_) along urbanization gradients
 ### Author: James S. Santangelo
 
 ## Background
