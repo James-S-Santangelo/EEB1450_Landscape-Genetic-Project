@@ -7,15 +7,25 @@ output:
     df_print: paged
 ---
 
+### Introduction
+
+Urbanzization represents one of the most widespread human disturbances to the landscape in the world. Urban environments are often associated with changes in biotic and abiotic factors (e.g. temperature, pollution, pollination), which have driven adaptive evolutionary responses across a diverse range of taxa. In addition, fragmentation associated with urbanization has altered patterns of gene flow among urban populations and increased the strength of genetic drift in smaller, more isolated urban poulations. As a result, urban populations often show evidence of reduced genetic diversity and are frequently differentiated from nearby rural populations. Despite advances in our understanding of the effects of urbanization on selection, gene flow and genetic drift, most studies only focus on the effects of urbanization on single evolutionary mechanisms. Thus, the relative importance of selection, gene flow and genetic drift in influencing the structure of urban populations in any one system remain largely unknown. 
+ 
+Our lab has previously documented widespread clines in the frequency of hydrogen cyanide (HCN) along urban-rural gradients across multiple cities, with lower frequencing of HCN in urban populations. While previous work has identified urban-rural gradients in snow depth and minimum winter temperature as an important selective agent producing these clines, the importance of gene flow and genetic drift in either constraining or facilitating the formation of phenotypic clines in cyanogenesis remain unexplored. In an upcoming paper, Johnson _et al._ (2018, _Proc B_, in press) use microsatellite genotyping of multiple individuals along urban-rural transects across 8 cities to examine changes in neutral genetic diversity and patterns of genetic differentiation associated with urbanization. In this project, I use a subset of this data from two cities (Acton and Fergus, Ontario) to perform some basic population genetic analysis that would form the first step in assessing the importance of gene flow and genetic drift in influencing allele frequencies along urban-rural gradients. One of these cities (Fergus) shows a clines in the frequency of HCN whereas the other (Acton) does not. Specifically, I address the following questions:
+ 
+1. Are the microsatellite loci in Hardy-Weinberg and linkage equilibrium?
+2. Do Acton and Fergus show evidence of isolation by distance across the urban to rural transect?
+3. Are urban and rural population genetically differentiated, after accounting for isolation by distance?
+
 ### Methods and Results
 
 #### The data
 
 The data used in this project is a subset of the data presented in an upcomming paper in the _Proceeding of the Royal Society B_ by Johnson, M. T. J. _et al._ (2018, in press). In the paper, they genotype 16 microsatellite loci from each of 10 individual _T. repens_ plants from 14 populations spanning an urban to rural transect across 8 cities. Thus, they genotyped a total of 1,120 individuals. In this project, I use only a subset of this data and include the microsatellite data from 280 individuals representing data from 2 cities, namely, Fergus and Acton, Ontario (28 populations total, see Fig. 1 for example transect). 
 
-# ```{r echo=FALSE, out.width='100%', fig.cap="Figure 1: 14 populations (pins) sampled along an urban to rural transect in the city of Acton. 10 individuals were sampled from each population and genotyped at 16 microsatellite loci"}
-# knitr::include_graphics('../images/Acton_transect.jpg')
-# ```
+```{r echo=FALSE, out.width='100%', fig.cap="Figure 1: 14 populations (pins) sampled along an urban to rural transect in the city of Acton. 10 individuals were sampled from each population and genotyped at 16 microsatellite loci"}
+knitr::include_graphics('../images/Acton_transect.jpg')
+```
 
 #### Data analysis
  
@@ -215,7 +225,7 @@ Fergus.genpop <- adegenet::genind2genpop(Fergus.genind, process.other = TRUE)
 Acton.genpop <- adegenet::genind2genpop(Acton.genind, process.other = TRUE)
 ```
  
-To confirm proper loading of the data, let's inspect and summarize one of the genind objects (Fergus). As you can see below, each genind object contains 140 individuals genotypes at 16 loci. Habitat and population data are contained in the optional content, in addition to the geographical location (X and Y) of each individuals (averaged when outputting to genpop object to obtain popoulation-level coordinates).
+To confirm proper loading of the data, let's inspect and summarize one of the genind objects (Fergus). As you can see below, each genind object contains 140 individuals genotypes at 16 loci. Habitat and population data are contained in the optional content, in addition to the geographical location (X and Y) of each individual (averaged when outputting to genpop object to obtain popoulation-level coordinates).
 
 ```{r}
 print(Fergus.genind)
@@ -236,7 +246,7 @@ round(pegas::hw.test(Acton.genind, B = 1000), digits = 3)
 round(pegas::hw.test(Fergus.genind, B = 1000), digits = 3)
 ```
 
-However, while most loci show evidence of deviations from HWE, we see that this is mostly explained by population subdivision (i.e. deviations of particular loci in only some populations). Below, I show deviations from HWE for each locus in each population for the city of Acton (both cities are qualitatively similar). We can see that while some loci show deviation from HWE in some populations, no locus is consistently in HWE across all populations. Similarly, no populations shows consistent deviations from HWE for all loci.
+However, while most loci show evidence of deviations from HWE, we see that this is largely explained by population subdivision (i.e. deviations of particular loci in only some populations). Below, I show deviations from HWE for each locus in each population for the city of Acton (both cities are qualitatively similar). We can see that while some loci show deviation from HWE in some populations, no locus is consistently in HWE across all populations. Similarly, no populations shows consistent deviations from HWE for all loci.
  
 ```{r, message=FALSE, collapse=TRUE, warning=FALSE}
 # Show deviation from HWE for each locus in each population for Acton
@@ -244,7 +254,7 @@ HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Acton.genind))
 HWE_Loci_Pops_Acton
 ```
  
-Next, I examined whether there was any evidence of linkage disequilibrium among loci. Neither city showed any evidence of global LD across all loci (Fig. 2 and 3, both _P_ > 0.05) and all pairwise estimates of LD (rbarD) among loci were < 0.3 (Fig. 4 and 5). Due to the asence of consitent deviation from HWE among loci and populations in the minimal amounts of LD among microsatellite loci, I conclude that the microsatellite loci chosen here are suitable for further population and landscape genetic analsyses. 
+Next, I examined whether there was any evidence of linkage disequilibrium among loci. Neither city showed any evidence of global LD across all loci (Fig. 2 and 3, both _P_ > 0.05) and all pairwise estimates of LD (rbarD) among loci were < 0.3 (Fig. 4 and 5). Due to the asence of consitent deviations from HWE among loci and populations and the minimal amounts of LD among microsatellite loci, I conclude that the microsatellite loci chosen here are suitable for further population and landscape genetic analsyses. 
 
 ```{r, results = "hide", fig.cap = "Fig. 2: Histogram of simulated rbarD values among microsatellite loci in the city of Acton. Dashed blue line shows observed value for rbarD"}
 # Global LD across loci for Acton
@@ -321,3 +331,13 @@ plot_rda(Acton.RDA)
 # Isolation by distance plot for Fergus
 plot_rda(Fergus.RDA)
 ```
+
+### Discussion and future directions
+
+In this project, I have used a subset of the microsatellite data provided by Johnson _et al._ (2018) to perform some basic population genetic analyses aimed at making inferences about the roles of gene flow and genetic drift in structurin allele frequencies along urban-rural gradients. First, I checked whether the microsatellite markers were in Hardy-Weinberg and linkage equilibrium, which they were. This is important since deviations from HWE and the presence of LD among markers would suggest they are not evolving neutrally, thereby preventing their use in population genetic analyses that rely on having data from neutral markers. 
+
+Second, I tested for the presence of isolation by distance (IBD) in each city, both across the entire transect and at various spatial scales along the transect. Both cities showed evidence of isolation by distance at smaller spatial scales, suggesting localized positive autorrelation in allele frequencies (i.e. more similar allel frequencies among nearby populations). Such a pattern can arise due to local genetic drift acting within populations coupled with limited gene flow homogenizing alleles among nearby populations. 
+
+Third, I examine whether urban and rural population were genetically differentiated, above what would be expected based on patterns of IBD detected across the transect. In Acton, there was no evidence that urban and rural populations were genetically differentiated, which could be due to higher levels of gene flow among urban and rural populations, thereby limiting differentiation across the transect. In fact, Acton does not show a phenotypic clines in HCN, which is common in many other cities, and this may be due to excessive gene flow constraining the ability of selection to generate local adaptation of urban and rural populations. By contrast, urban and rural populations in Fergus were genetically differentiated, even after accounting for IBD. This may occur due to founder events reducing genetic diversity in urban (or rural) populations, resulting in increased differentiation among habitat types. Alternatively, stronger drift (e.g. lower effective population size) in urban (or rural) populations may have a similar effect, leading to increased differentiation. Fergus does show a clines in HCN and recent evidence suggests that the epistatic genetic architecture of HCN makes populations especially prone to the formation of clines via drift alone. Thus, if genetic drift is stronger in urban populations in Fergus relative to rural populations, this may explain the presence of a clines in this city. 
+
+Additional analyses are required to test the hypotheses suggested above. For example, if genetic drift is in fact stronger in urban populations, we would expect to see reduced neutral diversity in urban populations relative to nearby rural habitats. Thus, an important next step would be to use these microsattelite loci to estimate observed and expected heterozygosity, allelic richness, F~IS~, etc., and assess the extent to which these measures of diversity vary across urban and rural populations. In addition, inferences about the extent of gene flow among populations can be more thoroughly assessed by examining the extent of population structure in each city. For example, bayesian clustering algorithms (e.g. STRUCTURE) and/or Discrimiant Analysis of Principal Components (DAPC) can be used to assess the number of population clusters across each transect. Higher levels of gene flow are expected to reduce the number of cluster because gene flow homogenizes allele frequencies across populations, thereby reducing differentiation and the number of genetically distinct population clusters. 
