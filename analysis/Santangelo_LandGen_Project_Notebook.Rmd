@@ -24,7 +24,7 @@ Our lab has previously documented widespread clines in the frequency of hydrogen
 The data used in this project is a subset of the data presented in an upcomming paper in the _Proceeding of the Royal Society B_ by Johnson, M. T. J. _et al._ (2018, in press). In the paper, they genotype 16 microsatellite loci from each of 10 individual _T. repens_ plants from 14 populations spanning an urban to rural transect across 8 cities. Thus, they genotyped a total of 1,120 individuals. In this project, I use only a subset of this data and include the microsatellite data from 280 individuals representing data from 2 cities, namely, Fergus and Acton, Ontario (28 populations total, see Fig. 1 for example transect). 
 
 ```{r echo=FALSE, out.width='100%', fig.cap="Figure 1: 14 populations (pins) sampled along an urban to rural transect in the city of Acton. 10 individuals were sampled from each population and genotyped at 16 microsatellite loci"}
-knitr::include_graphics('../images/Acton_transect.jpg')
+knitr::include_graphics('../images/Acton_transect_low.jpg')
 ```
 
 #### Data analysis
