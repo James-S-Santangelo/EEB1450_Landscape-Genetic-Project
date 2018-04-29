@@ -113,7 +113,7 @@ HWE_Loci_Pops <- function(genind_object){
 }
 
 HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Acton.genind))
-HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Fergus.genind))
+HWE_Loci_Pops_Fergus <- data.frame(HWE_Loci_Pops(Fergus.genind))
 
 # Global LD and LD among marker pairs
 LD_Acton <- poppr::ia(Acton.genind, sample = 10)

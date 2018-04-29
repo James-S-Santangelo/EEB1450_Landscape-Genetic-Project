@@ -412,12 +412,302 @@ round(pegas::hw.test(Fergus.genind, B = 1000), digits = 3)</code></pre>
 <pre class="r"><code># Show deviation from HWE for each locus in each population for Acton
 HWE_Loci_Pops_Acton &lt;- data.frame(HWE_Loci_Pops(Acton.genind))
 ## Monte Carlo (p-values):
-HWE_Loci_Pops_Acton</code></pre>
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["X2"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["X3"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["X4"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["X5"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["X6"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["X7"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["X8"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["X9"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["X10"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["X11"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["X12"],"name":[11],"type":["dbl"],"align":["right"]},{"label":["X13"],"name":[12],"type":["dbl"],"align":["right"]},{"label":["X14"],"name":[13],"type":["dbl"],"align":["right"]},{"label":["X15"],"name":[14],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.839","2":"0.239","3":"0.186","4":"0.011","5":"0.062","6":"0.033","7":"0.002","8":"0.379","9":"0.529","10":"0.458","11":"0.248","12":"1.000","13":"1.000","14":"0.094","_rn_":"X31"},{"1":"0.047","2":"0.902","3":"0.428","4":"0.601","5":"0.845","6":"0.927","7":"0.045","8":"0.455","9":"0.108","10":"1.000","11":"0.471","12":"0.649","13":"1.000","14":"0.598","_rn_":"H04"},{"1":"0.053","2":"0.008","3":"1.000","4":"1.000","5":"0.308","6":"0.471","7":"1.000","8":"0.341","9":"0.278","10":"0.755","11":"0.486","12":"1.000","13":"0.158","14":"0.009","_rn_":"B08"},{"1":"0.166","2":"0.361","3":"0.028","4":"0.017","5":"0.094","6":"0.015","7":"0.645","8":"0.048","9":"0.068","10":"0.029","11":"0.515","12":"0.000","13":"0.018","14":"0.428","_rn_":"C02"},{"1":"0.821","2":"1.000","3":"0.015","4":"0.027","5":"0.081","6":"0.790","7":"0.047","8":"0.850","9":"0.106","10":"0.596","11":"0.000","12":"0.088","13":"0.015","14":"0.549","_rn_":"C10"},{"1":"1.000","2":"1.000","3":"0.494","4":"1.000","5":"0.858","6":"1.000","7":"0.001","8":"0.352","9":"1.000","10":"0.002","11":"0.978","12":"0.296","13":"0.271","14":"0.527","_rn_":"C03"},{"1":"0.136","2":"0.019","3":"1.000","4":"0.016","5":"0.016","6":"0.024","7":"0.181","8":"0.333","9":"0.530","10":"0.267","11":"0.123","12":"0.028","13":"0.416","14":"0.057","_rn_":"B11"},{"1":"0.022","2":"0.110","3":"0.771","4":"0.000","5":"0.099","6":"0.045","7":"0.000","8":"1.000","9":"1.000","10":"0.677","11":"0.697","12":"0.154","13":"0.028","14":"0.022","_rn_":"A05"},{"1":"0.567","2":"0.003","3":"0.908","4":"0.004","5":"0.001","6":"0.034","7":"0.253","8":"0.207","9":"0.340","10":"0.050","11":"0.038","12":"0.038","13":"0.607","14":"0.165","_rn_":"G02"},{"1":"0.816","2":"0.110","3":"0.067","4":"0.065","5":"0.125","6":"0.018","7":"0.424","8":"0.510","9":"0.661","10":"0.140","11":"0.022","12":"0.402","13":"0.326","14":"0.690","_rn_":"H09"},{"1":"0.367","2":"0.042","3":"0.270","4":"0.023","5":"0.011","6":"0.027","7":"0.148","8":"0.005","9":"0.006","10":"0.001","11":"0.155","12":"0.832","13":"0.388","14":"0.457","_rn_":"E05"},{"1":"0.504","2":"0.206","3":"0.759","4":"0.153","5":"0.057","6":"0.018","7":"0.632","8":"0.003","9":"0.000","10":"0.210","11":"1.000","12":"1.000","13":"0.163","14":"0.001","_rn_":"B04"},{"1":"0.027","2":"0.215","3":"0.004","4":"0.361","5":"0.219","6":"0.019","7":"0.042","8":"0.090","9":"0.026","10":"0.020","11":"0.345","12":"0.457","13":"0.003","14":"0.010","_rn_":"H11"},{"1":"0.055","2":"0.094","3":"0.001","4":"0.058","5":"0.009","6":"0.328","7":"0.172","8":"0.098","9":"0.119","10":"0.001","11":"0.050","12":"0.468","13":"0.101","14":"0.146","_rn_":"H06"},{"1":"0.006","2":"0.626","3":"0.004","4":"0.058","5":"0.002","6":"0.025","7":"0.000","8":"0.000","9":"0.052","10":"0.002","11":"0.001","12":"0.744","13":"0.050","14":"0.983","_rn_":"C06"},{"1":"0.045","2":"0.338","3":"0.592","4":"0.000","5":"0.144","6":"0.327","7":"0.002","8":"1.000","9":"1.000","10":"1.000","11":"1.000","12":"1.000","13":"0.707","14":"0.295","_rn_":"G05"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">X2</th>
+<th align="right">X3</th>
+<th align="right">X4</th>
+<th align="right">X5</th>
+<th align="right">X6</th>
+<th align="right">X7</th>
+<th align="right">X8</th>
+<th align="right">X9</th>
+<th align="right">X10</th>
+<th align="right">X11</th>
+<th align="right">X12</th>
+<th align="right">X13</th>
+<th align="right">X14</th>
+<th align="right">X15</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>X31</td>
+<td align="right">0.839</td>
+<td align="right">0.239</td>
+<td align="right">0.186</td>
+<td align="right">0.011</td>
+<td align="right">0.062</td>
+<td align="right">0.033</td>
+<td align="right">0.002</td>
+<td align="right">0.379</td>
+<td align="right">0.529</td>
+<td align="right">0.458</td>
+<td align="right">0.248</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.094</td>
+</tr>
+<tr class="even">
+<td>H04</td>
+<td align="right">0.047</td>
+<td align="right">0.902</td>
+<td align="right">0.428</td>
+<td align="right">0.601</td>
+<td align="right">0.845</td>
+<td align="right">0.927</td>
+<td align="right">0.045</td>
+<td align="right">0.455</td>
+<td align="right">0.108</td>
+<td align="right">1.000</td>
+<td align="right">0.471</td>
+<td align="right">0.649</td>
+<td align="right">1.000</td>
+<td align="right">0.598</td>
+</tr>
+<tr class="odd">
+<td>B08</td>
+<td align="right">0.053</td>
+<td align="right">0.008</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.308</td>
+<td align="right">0.471</td>
+<td align="right">1.000</td>
+<td align="right">0.341</td>
+<td align="right">0.278</td>
+<td align="right">0.755</td>
+<td align="right">0.486</td>
+<td align="right">1.000</td>
+<td align="right">0.158</td>
+<td align="right">0.009</td>
+</tr>
+<tr class="even">
+<td>C02</td>
+<td align="right">0.166</td>
+<td align="right">0.361</td>
+<td align="right">0.028</td>
+<td align="right">0.017</td>
+<td align="right">0.094</td>
+<td align="right">0.015</td>
+<td align="right">0.645</td>
+<td align="right">0.048</td>
+<td align="right">0.068</td>
+<td align="right">0.029</td>
+<td align="right">0.515</td>
+<td align="right">0.000</td>
+<td align="right">0.018</td>
+<td align="right">0.428</td>
+</tr>
+<tr class="odd">
+<td>C10</td>
+<td align="right">0.821</td>
+<td align="right">1.000</td>
+<td align="right">0.015</td>
+<td align="right">0.027</td>
+<td align="right">0.081</td>
+<td align="right">0.790</td>
+<td align="right">0.047</td>
+<td align="right">0.850</td>
+<td align="right">0.106</td>
+<td align="right">0.596</td>
+<td align="right">0.000</td>
+<td align="right">0.088</td>
+<td align="right">0.015</td>
+<td align="right">0.549</td>
+</tr>
+<tr class="even">
+<td>C03</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.494</td>
+<td align="right">1.000</td>
+<td align="right">0.858</td>
+<td align="right">1.000</td>
+<td align="right">0.001</td>
+<td align="right">0.352</td>
+<td align="right">1.000</td>
+<td align="right">0.002</td>
+<td align="right">0.978</td>
+<td align="right">0.296</td>
+<td align="right">0.271</td>
+<td align="right">0.527</td>
+</tr>
+<tr class="odd">
+<td>B11</td>
+<td align="right">0.136</td>
+<td align="right">0.019</td>
+<td align="right">1.000</td>
+<td align="right">0.016</td>
+<td align="right">0.016</td>
+<td align="right">0.024</td>
+<td align="right">0.181</td>
+<td align="right">0.333</td>
+<td align="right">0.530</td>
+<td align="right">0.267</td>
+<td align="right">0.123</td>
+<td align="right">0.028</td>
+<td align="right">0.416</td>
+<td align="right">0.057</td>
+</tr>
+<tr class="even">
+<td>A05</td>
+<td align="right">0.022</td>
+<td align="right">0.110</td>
+<td align="right">0.771</td>
+<td align="right">0.000</td>
+<td align="right">0.099</td>
+<td align="right">0.045</td>
+<td align="right">0.000</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.677</td>
+<td align="right">0.697</td>
+<td align="right">0.154</td>
+<td align="right">0.028</td>
+<td align="right">0.022</td>
+</tr>
+<tr class="odd">
+<td>G02</td>
+<td align="right">0.567</td>
+<td align="right">0.003</td>
+<td align="right">0.908</td>
+<td align="right">0.004</td>
+<td align="right">0.001</td>
+<td align="right">0.034</td>
+<td align="right">0.253</td>
+<td align="right">0.207</td>
+<td align="right">0.340</td>
+<td align="right">0.050</td>
+<td align="right">0.038</td>
+<td align="right">0.038</td>
+<td align="right">0.607</td>
+<td align="right">0.165</td>
+</tr>
+<tr class="even">
+<td>H09</td>
+<td align="right">0.816</td>
+<td align="right">0.110</td>
+<td align="right">0.067</td>
+<td align="right">0.065</td>
+<td align="right">0.125</td>
+<td align="right">0.018</td>
+<td align="right">0.424</td>
+<td align="right">0.510</td>
+<td align="right">0.661</td>
+<td align="right">0.140</td>
+<td align="right">0.022</td>
+<td align="right">0.402</td>
+<td align="right">0.326</td>
+<td align="right">0.690</td>
+</tr>
+<tr class="odd">
+<td>E05</td>
+<td align="right">0.367</td>
+<td align="right">0.042</td>
+<td align="right">0.270</td>
+<td align="right">0.023</td>
+<td align="right">0.011</td>
+<td align="right">0.027</td>
+<td align="right">0.148</td>
+<td align="right">0.005</td>
+<td align="right">0.006</td>
+<td align="right">0.001</td>
+<td align="right">0.155</td>
+<td align="right">0.832</td>
+<td align="right">0.388</td>
+<td align="right">0.457</td>
+</tr>
+<tr class="even">
+<td>B04</td>
+<td align="right">0.504</td>
+<td align="right">0.206</td>
+<td align="right">0.759</td>
+<td align="right">0.153</td>
+<td align="right">0.057</td>
+<td align="right">0.018</td>
+<td align="right">0.632</td>
+<td align="right">0.003</td>
+<td align="right">0.000</td>
+<td align="right">0.210</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.163</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="odd">
+<td>H11</td>
+<td align="right">0.027</td>
+<td align="right">0.215</td>
+<td align="right">0.004</td>
+<td align="right">0.361</td>
+<td align="right">0.219</td>
+<td align="right">0.019</td>
+<td align="right">0.042</td>
+<td align="right">0.090</td>
+<td align="right">0.026</td>
+<td align="right">0.020</td>
+<td align="right">0.345</td>
+<td align="right">0.457</td>
+<td align="right">0.003</td>
+<td align="right">0.010</td>
+</tr>
+<tr class="even">
+<td>H06</td>
+<td align="right">0.055</td>
+<td align="right">0.094</td>
+<td align="right">0.001</td>
+<td align="right">0.058</td>
+<td align="right">0.009</td>
+<td align="right">0.328</td>
+<td align="right">0.172</td>
+<td align="right">0.098</td>
+<td align="right">0.119</td>
+<td align="right">0.001</td>
+<td align="right">0.050</td>
+<td align="right">0.468</td>
+<td align="right">0.101</td>
+<td align="right">0.146</td>
+</tr>
+<tr class="odd">
+<td>C06</td>
+<td align="right">0.006</td>
+<td align="right">0.626</td>
+<td align="right">0.004</td>
+<td align="right">0.058</td>
+<td align="right">0.002</td>
+<td align="right">0.025</td>
+<td align="right">0.000</td>
+<td align="right">0.000</td>
+<td align="right">0.052</td>
+<td align="right">0.002</td>
+<td align="right">0.001</td>
+<td align="right">0.744</td>
+<td align="right">0.050</td>
+<td align="right">0.983</td>
+</tr>
+<tr class="even">
+<td>G05</td>
+<td align="right">0.045</td>
+<td align="right">0.338</td>
+<td align="right">0.592</td>
+<td align="right">0.000</td>
+<td align="right">0.144</td>
+<td align="right">0.327</td>
+<td align="right">0.002</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">1.000</td>
+<td align="right">0.707</td>
+<td align="right">0.295</td>
+</tr>
+</tbody>
+</table>
 <p>Next, I examined whether there was any evidence of linkage disequilibrium among loci. Neither city showed any evidence of global LD across all loci (Fig. 2 and 3, both <em>P</em> &gt; 0.05) and all pairwise estimates of LD (rbarD) among loci were &lt; 0.3 (Fig. 4 and 5). Due to the asence of consitent deviations from HWE among loci and populations and the minimal amounts of LD among microsatellite loci, I conclude that the microsatellite loci chosen here are suitable for further population and landscape genetic analsyses.</p>
 <pre class="r"><code># Global LD across loci for Acton
 poppr::ia(Acton.genind, sample = 1000)</code></pre>

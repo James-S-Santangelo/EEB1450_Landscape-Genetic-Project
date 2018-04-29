@@ -253,7 +253,7 @@ However, while most loci show evidence of deviations from HWE, we see that this 
 ```{r, message=FALSE, collapse=TRUE, warning=FALSE}
 # Show deviation from HWE for each locus in each population for Acton
 HWE_Loci_Pops_Acton <- data.frame(HWE_Loci_Pops(Acton.genind))
-HWE_Loci_Pops_Acton
+knitr::kable(HWE_Loci_Pops_Acton)
 ```
  
 Next, I examined whether there was any evidence of linkage disequilibrium among loci. Neither city showed any evidence of global LD across all loci (Fig. 2 and 3, both _P_ > 0.05) and all pairwise estimates of LD (rbarD) among loci were < 0.3 (Fig. 4 and 5). Due to the asence of consitent deviations from HWE among loci and populations and the minimal amounts of LD among microsatellite loci, I conclude that the microsatellite loci chosen here are suitable for further population and landscape genetic analsyses. 
