@@ -3,7 +3,7 @@ library(tidyr)
 library(dplyr)
 
 # Load habitat type data
-Coord_Env_data <- "data-raw/Johnson-et-al_8-Cities_Coords-Enviro.csv"
+Coord_Env_data <- "data-raw/Coords-Enviro.csv"
 Coord_Env_data <- read.csv(Coord_Env_data, header = TRUE)
 
 # Create final data set
@@ -32,5 +32,5 @@ Env_data <- Coord_Env_data %>%
   select(PlantID, buildings, impervious)
 
 # Write cleanes up dataset to CSV
-write.csv(Coord_data, "data-clean/Johnson-et-al_8-Cities_Coord-data.csv", row.names = FALSE)
-write.csv(Env_data, "data-clean/Johnson-et-al_8-Cities_Env-data.csv", row.names = FALSE)
+write.csv(Coord_data, "data-clean/Coord-data.csv", row.names = FALSE)
+write.csv(Env_data, "data-clean/Env-data.csv", row.names = FALSE)

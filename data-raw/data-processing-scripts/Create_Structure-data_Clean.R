@@ -3,7 +3,7 @@ library(tidyr)
 library(dplyr)
 
 # Load habitat type data
-Structure_data <- "data-raw/Jonhson-et-al_Indiv_Habitat.csv"
+Structure_data <- "data-raw/Indiv_Habitat.csv"
 Structure_data <- read.csv(Structure_data, header = TRUE)
 
 # Clean and filter
@@ -22,6 +22,6 @@ Structure_data <- Structure_data %>%
   as.data.frame()
 
 # Write cleanes up dataset to CSV
-write.csv(Structure_data, "data-clean/Johnson-et-al_8-Cities_Structure-data.csv", row.names = FALSE)
+write.csv(Structure_data, "data-clean/Structure-data.csv", row.names = FALSE)
 
 

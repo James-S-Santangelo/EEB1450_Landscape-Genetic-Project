@@ -9,11 +9,20 @@ library(SoDA)
 library(hierfstat)
 library(vegan)
 
+# Create checkpoint with package versions on date analysis was performed.
+# Install packages and dependencies in project root.
+# Will return error if R version differs.
+# R v.3.4.3 source code can be downloaded from https://cran.rstudio.com/
+library(checkpoint)
+checkpoint("2018-04-29", project = getwd(),
+           checkpointLocation = "./", verbose = TRUE,
+           forceInstall = TRUE, forceProject = TRUE)
+
 # Load in all datasets
-MicroSat <- read.csv("data-clean/Johnson-et-al_8-Cities_MicroSat-Loci.csv")
-Structure <- read.csv("data-clean/Johnson-et-al_8-Cities_Structure-data.csv")
-Coord <- read.csv("data-clean/Johnson-et-al_8-Cities_Coord-data.csv")
-Enviro <- read.csv("data-clean/Johnson-et-al_8-Cities_Env-data.csv")
+MicroSat <- read.csv("data-clean/MicroSat-Loci.csv")
+Structure <- read.csv("data-clean/Structure-data.csv")
+Coord <- read.csv("data-clean/Coord-data.csv")
+Enviro <- read.csv("data-clean/Env-data.csv")
 
 # Add rownames and order dataframes
 add_rownames <- function(data_frame){

@@ -5,6 +5,7 @@ author: "James S. Santangelo"
 output:
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
 ### Introduction
@@ -50,10 +51,10 @@ library(hierfstat)
 library(vegan)
 
 # Load in all datasets
-MicroSat <- read.csv("data-clean/Johnson-et-al_8-Cities_MicroSat-Loci.csv")
-Structure <- read.csv("data-clean/Johnson-et-al_8-Cities_Structure-data.csv")
-Coord <- read.csv("data-clean/Johnson-et-al_8-Cities_Coord-data.csv")
-Enviro <- read.csv("data-clean/Johnson-et-al_8-Cities_Env-data.csv") # Not used in current analyses
+MicroSat <- read.csv("data-clean/MicroSat-Loci.csv")
+Structure <- read.csv("data-clean/Structure-data.csv")
+Coord <- read.csv("data-clean/Coord-data.csv")
+Enviro <- read.csv("data-clean/Env-data.csv") # Not used in current analyses
 
 ## FUNCTIONS ##
 

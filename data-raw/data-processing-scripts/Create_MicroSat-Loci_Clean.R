@@ -4,7 +4,7 @@ library(dplyr)
 library(tidyr)
 
 # Load Microsat data
-MicroSat_Data <- "data-raw/Johnson-et-al_8-Cities_MicroSat-Alleles.csv"
+MicroSat_Data <- "data-raw/MicroSat-Alleles.csv"
 MicroSat_Data <- read.csv(MicroSat_Data, header = TRUE)
 
 # Create dataset with only Acton and Fergus
@@ -35,4 +35,4 @@ MicroSat_Data <- data.frame(MicroSat_Data[1],
                                     MicroSat_Data[-1][c(F,T)], sep = ":") )
 
 # Write cleanes up dataset to CSV
-write.csv(MicroSat_Data, "data-clean/Johnson-et-al_8-Cities_MicroSat-Loci.csv", row.names = FALSE)
+write.csv(MicroSat_Data, "data-clean/MicroSat-Loci.csv", row.names = FALSE)
