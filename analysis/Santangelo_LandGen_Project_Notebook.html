@@ -412,11 +412,28 @@ round(pegas::hw.test(Fergus.genind, B = 1000), digits = 3)</code></pre>
 <pre class="r"><code># Show deviation from HWE for each locus in each population for Acton
 HWE_Loci_Pops_Acton &lt;- data.frame(HWE_Loci_Pops(Acton.genind))
 ## Monte Carlo (p-values):
-knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
-<table>
+knitr::kable(HWE_Loci_Pops_Acton, format = &quot;markdown&quot;)</code></pre>
+<table style="width:100%;">
+<colgroup>
+<col width="4%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+<col width="6%"></col>
+</colgroup>
 <thead>
 <tr class="header">
-<th></th>
+<th align="left"></th>
 <th align="right">X2</th>
 <th align="right">X3</th>
 <th align="right">X4</th>
@@ -435,7 +452,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>X31</td>
+<td align="left">X31</td>
 <td align="right">0.839</td>
 <td align="right">0.239</td>
 <td align="right">0.186</td>
@@ -452,7 +469,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.094</td>
 </tr>
 <tr class="even">
-<td>H04</td>
+<td align="left">H04</td>
 <td align="right">0.047</td>
 <td align="right">0.902</td>
 <td align="right">0.428</td>
@@ -469,7 +486,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.598</td>
 </tr>
 <tr class="odd">
-<td>B08</td>
+<td align="left">B08</td>
 <td align="right">0.053</td>
 <td align="right">0.008</td>
 <td align="right">1.000</td>
@@ -486,7 +503,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.009</td>
 </tr>
 <tr class="even">
-<td>C02</td>
+<td align="left">C02</td>
 <td align="right">0.166</td>
 <td align="right">0.361</td>
 <td align="right">0.028</td>
@@ -503,7 +520,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.428</td>
 </tr>
 <tr class="odd">
-<td>C10</td>
+<td align="left">C10</td>
 <td align="right">0.821</td>
 <td align="right">1.000</td>
 <td align="right">0.015</td>
@@ -520,7 +537,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.549</td>
 </tr>
 <tr class="even">
-<td>C03</td>
+<td align="left">C03</td>
 <td align="right">1.000</td>
 <td align="right">1.000</td>
 <td align="right">0.494</td>
@@ -537,7 +554,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.527</td>
 </tr>
 <tr class="odd">
-<td>B11</td>
+<td align="left">B11</td>
 <td align="right">0.136</td>
 <td align="right">0.019</td>
 <td align="right">1.000</td>
@@ -554,7 +571,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.057</td>
 </tr>
 <tr class="even">
-<td>A05</td>
+<td align="left">A05</td>
 <td align="right">0.022</td>
 <td align="right">0.110</td>
 <td align="right">0.771</td>
@@ -571,7 +588,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.022</td>
 </tr>
 <tr class="odd">
-<td>G02</td>
+<td align="left">G02</td>
 <td align="right">0.567</td>
 <td align="right">0.003</td>
 <td align="right">0.908</td>
@@ -588,7 +605,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.165</td>
 </tr>
 <tr class="even">
-<td>H09</td>
+<td align="left">H09</td>
 <td align="right">0.816</td>
 <td align="right">0.110</td>
 <td align="right">0.067</td>
@@ -605,7 +622,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.690</td>
 </tr>
 <tr class="odd">
-<td>E05</td>
+<td align="left">E05</td>
 <td align="right">0.367</td>
 <td align="right">0.042</td>
 <td align="right">0.270</td>
@@ -622,7 +639,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.457</td>
 </tr>
 <tr class="even">
-<td>B04</td>
+<td align="left">B04</td>
 <td align="right">0.504</td>
 <td align="right">0.206</td>
 <td align="right">0.759</td>
@@ -639,7 +656,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.001</td>
 </tr>
 <tr class="odd">
-<td>H11</td>
+<td align="left">H11</td>
 <td align="right">0.027</td>
 <td align="right">0.215</td>
 <td align="right">0.004</td>
@@ -656,7 +673,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.010</td>
 </tr>
 <tr class="even">
-<td>H06</td>
+<td align="left">H06</td>
 <td align="right">0.055</td>
 <td align="right">0.094</td>
 <td align="right">0.001</td>
@@ -673,7 +690,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.146</td>
 </tr>
 <tr class="odd">
-<td>C06</td>
+<td align="left">C06</td>
 <td align="right">0.006</td>
 <td align="right">0.626</td>
 <td align="right">0.004</td>
@@ -690,7 +707,7 @@ knitr::kable(HWE_Loci_Pops_Acton)</code></pre>
 <td align="right">0.983</td>
 </tr>
 <tr class="even">
-<td>G05</td>
+<td align="left">G05</td>
 <td align="right">0.045</td>
 <td align="right">0.338</td>
 <td align="right">0.592</td>
